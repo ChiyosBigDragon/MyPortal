@@ -5,3 +5,5 @@ draft: false
 ---
 
 Guten Morgen
+
+$$x + y = z$$ についておはなしします
