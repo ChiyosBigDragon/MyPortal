@@ -1,5 +1,5 @@
 # MyPortal
-https://chiyosbigdragon.github.io/<br>
+https://chiyosbigdragon.github.io/
 
 以下はあとで関数化しましょう
 
@@ -7,7 +7,7 @@ https://chiyosbigdragon.github.io/<br>
 cd MyPortal
 ```
 
-## ページ作成
+## 新規ページ
 ```sh
 hugo new post/$1.md --editor="atom"
 ```
@@ -20,6 +20,11 @@ hugo server -D -w -t blackburn
 - `-w`: リアルタイム
 - `-t + theme`: テーマ反映
 
+## ページ反映
+```sh
+hugo -t blackburn
+```
+
 ## ソース保存
 ```sh
 cd public
@@ -30,7 +35,6 @@ git push origin master
 
 ## デプロイ
 ```sh
-cd public
 git add .
 git commit -m "msg"
 git push origin master

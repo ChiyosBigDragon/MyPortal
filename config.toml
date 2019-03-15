@@ -1,5 +1,5 @@
 baseurl = "https://chiyosbigdragon.github.io/" # Make sure to end baseurl with a '/'
-title = "Wer isst meinen Apfel?"
+title = "Der Pinguin werft das Fenster mit dem Apfel ein."
 author = "ChiyosBigDragon"
 # Shown in the side menu
 copyright = "&copy; 2019. All rights reserved."
@@ -9,15 +9,16 @@ paginate = 10
 [indexes]
   tag = "tags"
   topic = "topics"
+  category = "categories"
 
 [params]
   # Shown in the home page
-  subtitle = "A Hugo Theme"
+  # subtitle = "A Hugo Theme"
   brand = "Blackburn"
   googleAnalytics = "Your Google Analytics tracking ID"
   disqus = "Your Disqus shortname"
   # CSS name for highlight.js
-  highlightjs = "androidstudio"
+  highlightjs = "github-gist"
   highlightjs_extra_languages = ["yaml"]
   dateFormat = "02 Jan 2006, 15:04"
   # Include any custom CSS and/or JS files
@@ -61,44 +62,44 @@ paginate = 10
 
   # SNS microblogging
   twitter = "*"
-  gnusocial = "*" # Specify href (e.g. https://quitter.se/yourusername)
-  facebook = "*"
-  googleplus = "*"
-  weibo = "*"
-  tumblr = "*"
+  # gnusocial = "*" # Specify href (e.g. https://quitter.se/yourusername)
+  # facebook = "*"
+  # googleplus = "*"
+  # weibo = "*"
+  # tumblr = "*"
 
   # SNS photo/video sharing
-  instagram = "*"
-  flickr = "*"
-  photo500px = "*"
-  pinterest = "*"
-  youtube = "*"
-  vimeo = "*"
-  vine = "*"
-  slideshare = "*"
+  # instagram = "*"
+  # flickr = "*"
+  # photo500px = "*"
+  # pinterest = "*"
+  # youtube = "*"
+  # vimeo = "*"
+  # vine = "*"
+  # slideshare = "*"
 
   # SNS career oriented
-  linkedin = "*"
-  xing = "*"
+  # linkedin = "*"
+  # xing = "*"
 
   # SNS news
-  reddit = "*"
-  hackernews = "*"
+  # reddit = "*"
+  # hackernews = "*"
 
   # Techie
   github = "*"
-  gitlab = "*"
-  bitbucket = "*"
-  stackoverflow = "*"
-  serverfault = "*"
+  # gitlab = "*"
+  # bitbucket = "*"
+  # stackoverflow = "*"
+  # serverfault = "*"
 
   # Gaming
   steam = "*"
-  mobygames = "*"
+  # mobygames = "*"
 
   # Music
-  lastfm = "*"
-  discogs = "*"
+  # lastfm = "*"
+  # discogs = "*"
 
   # Other
-  keybase = "*"
+  # keybase = "*"
