@@ -24,7 +24,7 @@ paginate = 10
   # Include any custom CSS and/or JS files
   # (relative to /static folder)
   custom_css = ["css/my.css"]
-  custom_js = ["js/my.js"]
+  custom_js = ["js/srcReader.js"]
 
   [params.piwikAnalytics]
     siteid = 2
