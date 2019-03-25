@@ -17,6 +17,10 @@
     - [ ] スクロール
     - [ ] コピーボタン
     - [ ] (任意)ファイル名
+    - 外部参照ってこれでいいの?
+        ```html
+        <pre><code class="language-cpp" src="url"></code></pre>
+        ```
 - [ ] Read More
     - いらない
     - Postsぐらいの簡潔さでいい
@@ -26,8 +30,7 @@
 - [ ] 被共有
     - [ ] faviconの作成
     - [ ] 記事ごとのサムネイル設定
-        - [ ] ないときはfaviconに近いやつ
+        - ないときはfaviconに近いやつ
     - [ ] SNSの共有ボタン
 - [ ] アクセスカウンター
     - [【ajax-counter】Ajaxによるアクセスカウンタを作ったので公開します](https://shirokai.hatenablog.com/entry/ajax-counter)
-- [ ]
