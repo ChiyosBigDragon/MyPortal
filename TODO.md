@@ -17,9 +17,9 @@
     - [ ] スクロール
     - [ ] コピーボタン
     - [ ] (任意)ファイル名
-    - 外部参照ってこれでいいの?
+    - [x] 外部参照
         ```html
-        <pre><code class="language-cpp" src="url"></code></pre>
+        <pre><code class="language-xxx" src="url.xxx"></code></pre>
         ```
 - [ ] Read More
     - いらない
