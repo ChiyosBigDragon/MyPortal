@@ -1,6 +1,7 @@
 // <pre><code>にsrc属性を追加
 // <head>でjQueryを呼ぶことに注意
 
+// DOMを読み込むまで動作しない
 $( function() {
     $('pre code').each( function(index, codeTag) {
         var obj = $(this);
