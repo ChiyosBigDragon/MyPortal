@@ -53,6 +53,11 @@ code {
 }
 pre code {
   font-family: consolas, "Courier New", monospace;
+  max-height: 300px;
+  font-size: 15px;
+  padding: 0px 3px;
+  margin: 0px 3px;
+  overflow-y:scroll
 }
 blockquote {
   margin: 25px 0;

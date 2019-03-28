@@ -1,5 +1,6 @@
 ## ページレイアウト
-- [ ] タイトル
+- [x] タイトル
+    - サーチしやすくなりましたか?
     - 短めかつサーチしやすいように
     - サブは **Der Pinguin werft das Fenster mit dem Apfel ein.** でよくないか?
     - 左上に置くか，サイドバーに置くか
@@ -7,15 +8,19 @@
     - [ ] About
     - [ ] Product
         - ないけど
-    - [ ] Blog
+    - [x] Blog
         - 最新5件ぐらい表示させたら
-- [ ] カテゴリ/タグ
+- [x] カテゴリ/タグ
     - 押したあとの題字が **Srm** とかになるの気に食わない
+    - `config.toml` に以下を記述
+        ```toml
+        preserveTaxonomyNames = true
+        ```
 - [ ] シンタックスハイライト
     - AtCoderみたいにしたい
     - **google-code-prettify** を使っている?
-    - [ ] スクロール
-    - [ ] コピーボタン
+    - [x] スクロール
+    - [ ] 展開ボタン
     - [ ] (任意)ファイル名
     - [x] 外部参照
         ```html
@@ -23,7 +28,7 @@
         ```
 - [ ] Read More
     - いらない
-    - Postsぐらいの簡潔さでいい
+    - Postsぐらい簡潔でいい
 - [ ] ブログカード
     - [iframely](https://iframely.com/) 使うのが丸い?
     - markdownにhtml置くのアレだけどしょうがない
