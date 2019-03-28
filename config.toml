@@ -1,10 +1,11 @@
 baseurl = "https://chiyosbigdragon.github.io/" # Make sure to end baseurl with a '/'
-title = "Der Pinguin werft das Fenster mit dem Apfel ein."
+title = "Spielsand"
 author = "ChiyosBigDragon"
 # Shown in the side menu
 copyright = "&copy; 2019. All rights reserved."
 canonifyurls = true
 paginate = 10
+preserveTaxonomyNames = true
 
 [indexes]
   tag = "tags"
@@ -13,8 +14,8 @@ paginate = 10
 
 [params]
   # Shown in the home page
-  # subtitle = "A Hugo Theme"
-  brand = "Blackburn"
+  subtitle = "Der Pinguin werft das Fenster mit dem Apfel ein."
+  brand = "Spielsand"
   googleAnalytics = "UA-126147693-2"
   disqus = "Your Disqus shortname"
   # CSS name for highlight.js
@@ -87,7 +88,7 @@ paginate = 10
   # hackernews = "*"
 
   # Techie
-  github = "*"
+  github = "ChiyosBigDragon"
   # gitlab = "*"
   # bitbucket = "*"
   # stackoverflow = "*"
