@@ -26,6 +26,10 @@
         ```html
         <pre><code class="language-xxx" src="url.xxx"></code></pre>
         ```
+        - 一応shortcodeも書いてみたが全然楽になっていない．`src`から拡張子を抜き出せたら多分楽になる．
+        ```
+        {{< code language="xxx" src="url.xxx" >}}
+        ```
 - [ ] Read More
     - いらない
     - Postsぐらい簡潔でいい
@@ -37,6 +41,9 @@
     - [ ] 記事ごとのサムネイル設定
         - ないときはfaviconに近いやつ
     - [ ] SNSの共有ボタン
+- [ ] Disqus
+    - 登録するの面倒だな
+    - コメント書くひといるかな
 - [ ] アクセスカウンター
     - [【ajax-counter】Ajaxによるアクセスカウンタを作ったので公開します](https://shirokai.hatenablog.com/entry/ajax-counter)
 - [ ] スマホ対応
