@@ -3,5 +3,5 @@ title: "Library"
 draft: false
 ---
 
-# GraphTheory
+# Graph Theory
 - [Lowest Common Ancestor (LCA)](./graph_theory/lca/lca)

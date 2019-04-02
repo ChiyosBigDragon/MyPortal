@@ -1,5 +1,5 @@
 ---
-title: "Lowest Common Ancestor (LCA)"
+title: "LCA (Lowest Common Ancestor)"
 draft: false
 ---
 
