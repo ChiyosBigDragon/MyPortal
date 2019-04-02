@@ -6,6 +6,7 @@ copyright = "&copy; 2019. All rights reserved."
 canonifyurls = true
 paginate = 10
 preserveTaxonomyNames = true
+pluralizeListTitles = false
 
 [indexes]
   tag = "tags"
@@ -33,29 +34,29 @@ preserveTaxonomyNames = true
 
 [menu]
   # Shown in the side menu.
-  [[menu.main]]
-    name = "Home"
-    pre = "<i class='fa fa-home fa-fw'></i>"
-    weight = 1
-    identifier = "home"
-    url = "/"
-  [[menu.main]]
-    name = "Blog"
-    pre = "<i class='fa fa-list fa-fw'></i>"
-    weight = 2
-    identifier = "blog"
-    url = "/blog/"
-  [[menu.main]]
-    name = "About"
-    pre = "<i class='fa fa-user fa-fw'></i>"
-    weight = 3
-    identifier = "about"
-    url = "/about/"
-  [[menu.main]]
-    name = "Contact"
-    pre = "<i class='fa fa-phone fa-fw'></i>"
-    weight = 4
-    url = "/contact/"
+    [[menu.main]]
+        name = "Home"
+        pre = "<i class='fa fa-home fa-fw'></i>"
+        weight = 1
+        identifier = "home"
+        url = "/"
+    [[menu.main]]
+        name = "About"
+        pre = "<i class='fa fa-user fa-fw'></i>"
+        weight = 2
+        identifier = "about"
+        url = "/about/"
+    [[menu.main]]
+        name = "Blog"
+        pre = "<i class='fa fa-list fa-fw'></i>"
+        weight = 3
+        identifier = "blog"
+        url = "/blog/"
+    [[menu.main]]
+        name = "C-Programming"
+        pre = "<i class='fa fa-bug fa-fw'></i>"
+        weight = 4
+        url = "/competitiveprogramming/"
 
 [social]
   # Link your social networking accounts to the side menu

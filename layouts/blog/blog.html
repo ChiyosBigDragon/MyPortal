@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+
+<div class="header">
+    <h1>{{ .Title }}</h1>
+    <h2><a href="/">Home</a> >> {{ .Title }}</h2>
+</div>
+<div class="content">
+    {{ range ( .Paginate (where .Data.Pages "Type" "blog")).Pages }}
+        {{ .Render "summary"}}
+    {{ end }}
+    {{ partial "pagination.html" . }}
+</div>
+
+{{ partial "footer.html" . }}

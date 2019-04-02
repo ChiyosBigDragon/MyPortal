@@ -5,11 +5,18 @@
     - サブは **Der Pinguin werft das Fenster mit dem Apfel ein.** でよくないか?
     - 左上に置くか，サイドバーに置くか
 - [ ] トップページ
+    - ABCD…ってやったら綺麗だよね．
+        - サイドバーがHomeから始まるからHABCDSでもいいかも
     - [ ] About
-    - [ ] Product
-        - ないけど
     - [x] Blog
         - 最新5件ぐらい表示させたら
+    - [ ] CompetitiveProgramming
+    - [ ] どっち
+        - [ ] Deutsch
+        - [ ] Diary
+    - [ ] Sumo
+    - [ ] Product
+        - ないけど
 - [x] カテゴリ/タグ
     - 押したあとの題字が **Srm** とかになるの気に食わない
     - `config.toml` に以下を記述

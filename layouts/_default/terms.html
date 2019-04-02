@@ -1,0 +1,27 @@
+{{ partial "top_head.html" . }}
+
+<div class="header">
+    <h1>Category</h1>
+    <h2><a href="/blog">Blog</a> >> Category</h2>
+</div>
+
+<section id="sitemap">
+    <div>
+        <h1>Topics</h1>
+        <ul>
+            {{ range .Site.Taxonomies.topics.ByCount }}
+                <li><a href="{{ $.Site.BaseURL | relURL }}topics/{{ .Name | urlize }}">{{ .Name }}</a><span> ({{ .Count }})</span></li>
+            {{ end }}
+        </ul>
+    </div>
+    <div>
+        <h1>Tags</h1>
+        <ul>
+            {{ range .Site.Taxonomies.tags.ByCount }}
+                <li><div><a href="{{ $.Site.BaseURL | relURL }}tags/{{ .Name | urlize }}">{{ .Name }}</a><span> ({{ .Count }})</span></div></li>
+            {{ end }}
+        </ul>
+    </div>
+</section>
+
+{{ partial "footer.html" . }}
