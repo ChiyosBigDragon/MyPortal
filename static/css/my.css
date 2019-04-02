@@ -7,7 +7,7 @@
     line-height: 1.6em;
     color: #666;
 }
-.content h2 {
+.content h1,h2 {
     color: #000;
 }
 
@@ -37,7 +37,7 @@
     color: #888;
 }
 
-a {
+.content a {
     font-weight: 600;
     color: #3b8bba;
     text-decoration: none;
@@ -64,4 +64,23 @@ blockquote {
   padding-left: 20px;
   border-left: 4px solid #ccc;
   font-style: italic;
+}
+
+
+table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all;
+    margin-bottom: 16px;
+}
+table tr {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+td,th {
+    padding: 6px 13px;
+    border: 1px solid #ddd;
 }
