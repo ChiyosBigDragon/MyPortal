@@ -1,0 +1,10 @@
+<li><div class="guide"><a href="./blog" style="display:inline; margin-right:10px;">Blog</a><span style="display:inline; font-size:0.75em">最新5件を表示しています．</li>
+<li>
+    <ul>
+        {{ range first 5 .Pages }}
+            <li>
+                <time>{{ .Date.Format "02 Jan 2006" }}</time> - <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+        {{ end }}
+    </ul>
+</li>
