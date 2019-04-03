@@ -1,6 +1,6 @@
 ---
 title: "SRM500 Div1Easy MafiaGame"
-date: 2018-07-18T12:00:00+09:00
+date: 2018-07-19T12:00:00+09:00
 draft: false
 tags: ["SRM","Math","Simulation"]
 topics: ["CompetitiveProgramming"]
