@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Greedy on Spielsand</title>
+    <link>https://chiyosbigdragon.github.io/tags/greedy/</link>
+    <description>Recent content in Greedy on Spielsand</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2019. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 16 Aug 2018 03:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://chiyosbigdragon.github.io/tags/greedy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SRM506 Div1Easy SlimeXSlimesCity</title>
+      <link>https://chiyosbigdragon.github.io/blog/2018/08/16/20180816/</link>
+      <pubDate>Thu, 16 Aug 2018 03:30:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/blog/2018/08/16/20180816/</guid>
+      <description> URL https://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=11154
+概略 $N$ 個の街があり各々には名前がついている．2つの街の合併を繰り返し，最終的に1つにすることを考える．
+合併前の街の人口を $i,j (i \leq j)$ とする．
+ $i &amp;lt; j$ のとき  合併後の街の名前は $j$ を継承する．  $i = j$ のとき  合併後の街の名前は $i$ または $j$ を継承する．   最終的に街が1つになったとき，その名前として取り得るものは何通りか．
+方針 B - Colorful Creatures &amp;mdash; AtCoder Grand Contest 011
+サンプル5の解釈を説明する．
+ソートして人口の昇順に並べても一般性は失われない．また赤は累積和である．
+合併のルールから，自分より人口の少ない街は無条件に取り込めるので全て取り込むことにする．これで増えた人口でも1つ右の街が取り込めなければ，その街が生き残ることはない．最終目標は全ての街を合併することなので，右から赤と黒を判定をしていき，図の点線のように断層ができるまでの数が答え．
+ </description>
+    </item>
+    
+    <item>
+      <title>SRM501 Div1Easy FoxPlayingGame</title>
+      <link>https://chiyosbigdragon.github.io/blog/2018/07/26/20180726/</link>
+      <pubDate>Thu, 26 Jul 2018 17:30:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/blog/2018/07/26/20180726/</guid>
+      <description>URL http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=11284
+概略 初期スコアを0として2種類の行動を任意の順番で行う．
+ A: scoreAを足す． B: scoreBを掛ける  Aを $nA$ 回，Bを $nB$ 回行うときのスコアの最大値を求める．
+方針 1年生 (A First Grader) &amp;mdash; Aizu Online Judge を解いた経験からDP解を思いつくも，うまくいかない．しぶしぶ考察すると，「足してから掛けたい」「正負は融通が利くので絶対値を大きくしたい」など思いついたため，全部入れ込んだ．場合分けはコードを参照．
+ 追記：他人の解法が鮮やかすぎて直視できない</description>
+    </item>
+    
+    <item>
+      <title>SRM500 Div2Easy SRMCards</title>
+      <link>https://chiyosbigdragon.github.io/blog/2018/07/18/20180718-1/</link>
+      <pubDate>Wed, 18 Jul 2018 12:00:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/blog/2018/07/18/20180718-1/</guid>
+      <description> URL http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=11341
+概略 数列が空になるまで以下の操作を繰り返す．
+ 数列から1つ数字を選びこれを消す． 上で選んだ数字を $n$とするとき，数列に $n\pm 1$ が存在すればこれ(ら)も同時に消す．  取り得る操作回数のうち最大を求める．
+方針 ソートして小さい順に選択すると最大．証明は苦しいが，3個同時に消せる場面では必ず2-1と2回に分けて消せることに注意する．
+ </description>
+    </item>
+    
+  </channel>
+</rss>
