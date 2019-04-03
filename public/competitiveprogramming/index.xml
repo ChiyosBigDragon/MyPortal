@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Competitiveprogramming on Spielsand</title>
+    <link>https://chiyosbigdragon.github.io/competitiveprogramming/</link>
+    <description>Recent content in Competitiveprogramming on Spielsand</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2019. All rights reserved.</copyright>
+    
+	<atom:link href="https://chiyosbigdragon.github.io/competitiveprogramming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Library</title>
+      <link>https://chiyosbigdragon.github.io/competitiveprogramming/library/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/competitiveprogramming/library/</guid>
+      <description> Graph Theory  Lowest Common Ancestor (LCA)  </description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://chiyosbigdragon.github.io/competitiveprogramming/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/competitiveprogramming/tools/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

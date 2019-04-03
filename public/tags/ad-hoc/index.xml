@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ad hoc on Spielsand</title>
+    <link>https://chiyosbigdragon.github.io/tags/ad-hoc/</link>
+    <description>Recent content in Ad hoc on Spielsand</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2019. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 31 Jul 2018 16:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://chiyosbigdragon.github.io/tags/ad-hoc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SRM503 Div1Easy ToastXToast</title>
+      <link>https://chiyosbigdragon.github.io/blog/2018/07/31/</link>
+      <pubDate>Tue, 31 Jul 2018 16:00:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/blog/2018/07/31/</guid>
+      <description> URL http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=11204
+概略 $N$ 種のパンについての情報underとoverが与えられる．各種のパンには $X_i$ が定められており，これより小さいパンはunder，大きいパンはoverである．$\min N$ はいくらであるか．条件を満たすパンが存在しない場合-1を返す．
+方針 最初サンプル3の意味がわからなくて焦った.
+1列に並べた時に
+ 左端にover || 右端にunder  そんなパンはないので，-1  underとoverが完全に分かれている  Xがその間に置けて，1  その他  下図より，2（のはず）    </description>
+    </item>
+    
+  </channel>
+</rss>

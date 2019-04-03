@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  <title>ブログ記事中のスニペットを外部参照する &middot; Spielsand</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://chiyosbigdragon.github.io/img/favicon.ico" type="image/x-icon" />
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  
+    
+        <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/my.css">
+    
+  
+  
+    
+        <script src="https://chiyosbigdragon.github.io/js/srcReader.js"></script>
+    
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://chiyosbigdragon.github.io/">Spielsand</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/blog/"><i class='fa fa-list fa-fw'></i>Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/competitiveprogramming/"><i class='fa fa-bug fa-fw'></i>C-Programming</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/*" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/ChiyosBigDragon" target="_blank"><i class="fa fa-github fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://steamcommunity.com/id/*" target="_blank"><i class="fa fa-steam-square fa-fw"></i>Steam</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2019. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+    <h1>ブログ記事中のスニペットを外部参照する</h1>
+    <h2><a href="https://chiyosbigdragon.github.io/blog">Blog</a> >> ブログ記事中のスニペットを外部参照する</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>27 Mar 2019, 10:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/programming">Programming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/jquery">jQuery</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/html">HTML</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  
+
+<pre><code class="language-cpp" src="https://chiyosbigdragon.github.io/post/2019/03/27/sample.cpp"></code></pre>
+
+
+<p>上を表示するためのHTMLは次の通りです．</p>
+
+<pre><code class="language-html">&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; src=&quot;https://chiyosbigdragon.github.io/post/2019/03/27/sample.cpp&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+
+<p>端的には<code>&lt;pre&gt;&lt;code&gt;</code>に<code>src</code>属性を追加します．</p>
+
+<h2 id="動機">動機</h2>
+
+<p>最近はもっぱらラップトップでブログを書くわけですが，画面が小さく<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>，エディタとプレビューでいっぱいいっぱいになってしまいます．こんな状態でスニペットを含むMarkdownを開いた光景は，JR武蔵小杉駅の南武線ホームを彷彿とさせます．</p>
+
+<p>スニペットを省略できれば全体の見通しが良くなることはもちろん，メンテナンス性の向上(?)も期待されます．どっかの数学者も言ってましたね．「ソースコードは分割せよ」って．</p>
+
+<h2 id="流れ">流れ</h2>
+
+<ul>
+<li><a href="#jQueryを読み込む">jQueryを読み込む</a></li>
+<li><a href="#DOMの書き換え">DOMの書き換え</a></li>
+<li><a href="#Markdown">Markdown</a></li>
+</ul>
+
+<h2 id="jqueryを読み込む">jQueryを読み込む</h2>
+
+<p>今回はjQueryを使うことにします．<code>&lt;head&gt;</code>内で読み込み．</p>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;head&gt;
+</code></pre>
+
+<h2 id="domの書き換え">DOMの書き換え</h2>
+
+<pre><code class="language-js" src="https://raw.githubusercontent.com/ChiyosBigDragon/chiyosbigdragon.github.io/master/js/srcReader.js"></code></pre>
+
+
+<h3 id="メモ">メモ</h3>
+
+<ul>
+<li><code>index</code>と書いたが実際は何を指しているのか不明．なんだろう．</li>
+</ul>
+
+<h2 id="markdown">Markdown</h2>
+
+<p>今回の記事のソースコードはこんな感じ．</p>
+
+<pre><code class="language-markdown">    ---
+    title: &quot;ブログ記事中のスニペットを外部参照する&quot;
+    date: 2019-03-27T10:00:00+09:00
+    draft: false
+    topics: [&quot;Programming&quot;]
+    tags: [&quot;jQuery&quot;, &quot;HTML&quot;]
+    ---
+    
+    &lt;pre&gt;&lt;code class=&quot;language-cpp&quot; src=&quot;https://chiyosbigdragon.github.io/post/2019/03/27/sample.cpp&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
+
+    上を表示するためのHTMLは次の通りです．
+
+    ```html
+    &lt;pre&gt;&lt;code class=&quot;language-cpp&quot; src=&quot;https://chiyosbigdragon.github.io/post/2019/03/27/sample.cpp&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
+    ```
+
+    端的には`&lt;pre&gt;&lt;code&gt;`に`src`属性を追加します．
+
+    ## 動機
+    最近はもっぱらラップトップでブログを書くわけですが，画面が小さく[^1]，エディタとプレビューでいっぱいいっぱいになってしまいます．こんな状態でスニペットを含むMarkdownを開いた光景は，JR武蔵小杉駅の南武線ホームを彷彿とさせます．
+
+    スニペットを省略できれば全体の見通しが良くなることはもちろん，メンテナンス性の向上(?)も期待されます．どっかの数学者も言ってましたね．「ソースコードは分割せよ」って．
+
+    ## 流れ
+    - [jQueryを読み込む](#jQueryを読み込む)
+    - [DOMの書き換え](#DOMの書き換え)
+    - [Markdown](#Markdown)
+
+    ## jQueryを読み込む
+    今回はjQueryを使うことにします．`&lt;head&gt;`内で読み込み．
+
+    ```html
+    &lt;head&gt;
+        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;head&gt;
+    ```
+
+    ## DOMの書き換え
+    &lt;pre&gt;&lt;code class=&quot;language-js&quot; src=&quot;https://raw.githubusercontent.com/ChiyosBigDragon/chiyosbigdragon.github.io/master/js/srcReader.js&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
+
+    ### メモ
+    - `index`と書いたが実際は何を指しているのか不明．なんだろう．
+</code></pre>
+
+<p>本当はHugoのshortcode機能を使ってさらに楽するつもりだったが，そこまで変わらなかった．拡張子の抽出ができればいいのだが．</p>
+
+<p>ひたすら楽してブログラミング</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">12.5インチ
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://chiyosbigdragon.github.io/blog/2019/03/22/20190322/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://chiyosbigdragon.github.io/blog/2019/03/22/20190322/">SRM753 Div1Easy MaxCutFree</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'Your Disqus shortname';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$",   right: "$",   display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "$$",   right: "$$",   display: true },
+                { left: "\\[", right: "\\]", display: true  },
+            ],
+        });
+    });
+    </script>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,600&amp;subset=japanese" rel="stylesheet">
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126147693-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-126147693-2');
+    </script>
+
