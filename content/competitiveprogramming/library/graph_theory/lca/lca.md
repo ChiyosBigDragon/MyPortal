@@ -22,7 +22,7 @@ Euler Tourで木に対する情報を拾った後，RMQでLCAを求める．
 
 例として下図の木にアルゴリズムを用いる．
 
-![](./images/tree.png)
+![](../images/tree.png)
 
 ## Euler Tour
 木をDFSする．欲しい情報は以下の通り．

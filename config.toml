@@ -12,7 +12,6 @@ pluralizeListTitles = false
   tag = "tags"
   topic = "topics"
   category = "categories"
-  lib = "libs"
 
 [params]
   # Shown in the home page
