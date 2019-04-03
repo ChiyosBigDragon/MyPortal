@@ -58,7 +58,7 @@ url.json  スクレイピングと整形 TV_scrape.js  メモ  ライブラリ�
  実行 node index.js  角界のロボコップ
 他にやりたいこと  AWSで定期的に実行． Slackのslash-commandを用いた検索条件の追加削除．  今回はここまで．
 
- 金属バット (お笑いコンビ) &amp;mdash; Wikipedia [return]   </description>
+ 金属バット (お笑いコンビ) &amp;mdash; Wikipedia[return]   </description>
     </item>
     
     <item>

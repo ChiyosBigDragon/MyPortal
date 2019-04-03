@@ -6,12 +6,12 @@ topics: ["Programming"]
 tags: ["jQuery", "HTML"]
 ---
 
-{{< code language="cpp" src="https://chiyosbigdragon.github.io/post/2019/03/27/sample.cpp" >}}
+{{< code language="cpp" src="./sample.cpp" >}}
 
 上を表示するためのHTMLは次の通りです．
 
 ```html
-<pre><code class="language-cpp" src="https://chiyosbigdragon.github.io/post/2019/03/27/sample.cpp"></code></pre>
+<pre><code class="language-cpp" src="./sample.cpp"></code></pre>
 ```
 
 端的には`<pre><code>`に`src`属性を追加します．
@@ -52,13 +52,13 @@ tags: ["jQuery", "HTML"]
     topics: ["Programming"]
     tags: ["jQuery", "HTML"]
     ---
-    
-    <pre><code class="language-cpp" src="https://chiyosbigdragon.github.io/post/2019/03/27/sample.cpp"></code></pre>
+
+    <pre><code class="language-cpp" src="./sample.cpp"></code></pre>
 
     上を表示するためのHTMLは次の通りです．
 
     ```html
-    <pre><code class="language-cpp" src="https://chiyosbigdragon.github.io/post/2019/03/27/sample.cpp"></code></pre>
+    <pre><code class="language-cpp" src="./sample.cpp"></code></pre>
     ```
 
     端的には`<pre><code>`に`src`属性を追加します．

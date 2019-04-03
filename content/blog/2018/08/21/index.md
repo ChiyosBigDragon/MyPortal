@@ -22,9 +22,9 @@ $$
 である．これを下1桁 $0 \sim 9$ についてやればよく，結果下図が完成した．
 
 <center>
-    {{< figure src="../images/sum.png" >}}
+    {{< figure src="./images/sum.png" >}}
     <figcaption>4と7で表せる数の下一桁</figcaption>
-    {{< figure src="../images/minimum.png" >}}
+    {{< figure src="./images/minimum.png" >}}
     <figcaption>最小値未満の数は表せない</figcaption>
 </center>
 
