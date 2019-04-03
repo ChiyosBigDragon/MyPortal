@@ -1,0 +1,35 @@
+{{ partial "top_head.html" . }}
+
+<div class="header">
+  <h1>{{ .Title }}</h1>
+  <h2>{{ .Site.Params.subtitle }}</h2>
+</div>
+
+<section id="sitemap">
+    <div>
+        <h1>Contents</h1>
+        <ul>
+			<li><div class="guide"><a href="./about">About</div></li>
+            {{ partial "blog_first_5.html" . }}
+            <li><div class="guide"><a href="./competitiveprogramming" style="display:inline; margin-right:10px;">CompetitiveProgramming</a><span style="display:inline; font-size:0.75em">競技プログラミング用のあれこれ．</li>
+		</ul>
+    </div>
+    <div>
+        <h1>Links</h1>
+        <ul>
+			<li><div><a href="https://atcoder.jp/users/ChiyosBigDragon">AtCoder</a></div></li>
+            <li><div><a href="https://codeforces.com/profile/ChiyosBigDragon">Codeforces</a></div></li>
+			<li><a href="https://www.topcoder.com/members/ChiyosBigDragon/">TopCoder</a></li>
+		</ul>
+    </div>
+    <!-- <div>
+        <h1>Links</h1>
+        <ul>
+            <li><div><a href="https://atcoder.jp/users/ChiyosBigDragon">AtCoder</a></div></li>
+            <li><div><a href="https://codeforces.com/profile/ChiyosBigDragon">Codeforces</a></div></li>
+            <li><a href="https://www.topcoder.com/members/ChiyosBigDragon/">TopCoder</a></li>
+        </ul>
+    </div> -->
+</section>
+
+{{ partial "footer.html" . }}
