@@ -1,10 +1,10 @@
 ---
-title: "LCA (Lowest Common Ancestor)"
-draft: false
+title: "Combination"
+draft: true
 ---
 
 # 概略
-根付き木における2頂点の共通祖先のうち，最も深いものを示す．
+Combinationに係る諸計算のライブラリ
 
 # 目次
 - [アルゴリズム](#アルゴリズム)
@@ -12,7 +12,7 @@ draft: false
     - [RMQ (Range Minimum Query)](#rmq-range-minimum-query)
 - [実装例](#実装例)
 - [verify](#verify)
-    - [AOJ GRL_5_C](#AOJ GRL_5_C)
+    - [AOJ 1501](#AOJ 1501)
     - [ABC014_D](#ABC014_D)
 - [参考](#参考)
 
@@ -150,20 +150,23 @@ $v$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
 - get( $u,v$ ) := 頂点 $u$ と $v$ のLCAを求める．
     - $O(\log{V})$
 
-{{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/GraphTheory/LCA/LCA.cpp" >}}
+{{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Combination/pascal/combination_pascal.cpp" >}}
 
 # verify
-<h4 id="AOJ GRL_5_C"><a href="https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C">LCA: Lowest Common Ancestor - GRL_5_C &mdash; AIZU ONLINE JUDGE</a></h4>
+<h4 id="AOJ 1501"><a href="https://onlinejudge.u-aizu.ac.jp/challenges/search/volumes/1501">AOJ1501 Grid &mdash; AIZU ONLINE JUDGE</a></h4>
 
-{{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/GraphTheory/LCA/verify/GRL_5_C.cpp" >}}
+modulo 1,000,000,007 だと思っていたら～、<br>
+modulo 100,000,007 でした～。<br>
+チクショー！！
+
+{{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Combination/pascal/verify/AOJ1501.cpp" >}}
 
 <h4 id="ABC014_D"><a href="https://atcoder.jp/contests/abc014/tasks/abc014_4">D: 閉路 - AtCoder Beginner Contest 014 &mdash; AtCoder</a></h4>
 
 {{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/GraphTheory/LCA/verify/ABC014_D.cpp" >}}
 
 # 参考
-- [Lowest common ancestor &mdash; Wikipedia](https://en.wikipedia.org/wiki/Lowest_common_ancestor)
-- <a target="_blank" href="https://www.amazon.co.jp/gp/product/4839941068/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4839941068&linkCode=as2&tag=chiyosbigdrag-22&linkId=951fa29af799762ef87abd1933093da4">プログラミングコンテストチャレンジブック [第2版]　～問題解決のアルゴリズム活用力とコーディングテクニックを鍛える～</a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=chiyosbigdrag-22&l=am2&o=9&a=4839941068" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-    - P.294 ~
-- [LCA and RMQ ~簡潔もあるよ！~ &mdash; SlideShare](https://www.slideshare.net/yumainoue965/lca-and-rmq)
-- [前処理O(n)クエリO(1)のLCAと静的RMQ &mdash; ｼﾞｮｲｼﾞｮｲｼﾞｮｲ](http://joisino.hatenablog.com/entry/2017/08/13/210000)
+- [パスカルの三角形 &mdash; Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%91%E3%82%B9%E3%82%AB%E3%83%AB%E3%81%AE%E4%B8%89%E8%A7%92%E5%BD%A2)
+- [よくやる二項係数 (nCk mod. p)、逆元 (a^-1 mod. p) の求め方 &mdash; けんちょんの競プロ精進記録](http://drken1215.hatenablog.com/entry/2018/06/08/210000)
+- [nCr mod mの求め方 &mdash; uwicoder](https://www37.atwiki.jp/uwicoder/pages/2118.html)
+- [コウメ太夫 (@dayukoume) &mdash; Twitter](https://twitter.com/dayukoume)

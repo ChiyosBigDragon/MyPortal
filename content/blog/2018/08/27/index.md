@@ -1,8 +1,8 @@
 ---
 title: "SRM509 Div1Easy LuckyRemainder"
 date: 2018-08-27T22:30:00+09:00
-draft: true
-tags: ["SRM"]
+draft: false
+tags: ["SRM","Math"]
 topics: ["CompetitiveProgramming"]
 ---
 
@@ -10,22 +10,20 @@ topics: ["CompetitiveProgramming"]
 https://community.topcoder.com/stat?c=problem_statement&pm=11138
 
 ## 概略
-$1 \sim N$ のスロットが1列に並んでいる．プレイヤーは常にスロット $1$ の中身しか取得することができない．ゲームの目的は，開始時にスロット $M$ にあった中身を取得することである．
+$N$ 桁の整数 $X$ が与えられる．$super(X)\pmod {9}$ を求める．ただし，$super(X)$ とは $X$ の部分列の総和である．
 
-スロットには2通りの操作を行うことが出来る．
-
-- `Divide`
-    - $N$ を割り切れる素数 $p$ を選びスロットを $[1,\frac{N}{p}],[\frac{N}{p}+1,\frac{2N}{p}],…$ に分割する．この内，目的のスロットを含む部分列のみを保持する．その後，$N←\frac{N}{p}$とし，スロットの番号を $1 \sim \frac{N}{p}$ に振り直す．
-- `Shift`
-    - スロットを左/右にシフトする．シフトするとスロット番号が $-1/+1$ だけ変化する．スロット $0$ は $N$ に，$N+1$ は $1$ に別途移動する．
-
-最低で何回操作をすれば目的を達成できるか．
+### ex)
+$$
+super(123) = 123 + 12 + 13 + 23 + 1 + 2+ 3 = 177
+$$
 
 ## 方針
-全然できなかった．調べたら「`Divide`と`Shift`の操作は可換」ということがわかって（証明は知らない）そこからはノーヒントで行けた．これで250ptなんだ…
+$n\times 10^k\equiv n\times 1^k\equiv n\pmod 9$ なので，$super(X)$ を求める過程で各桁の数字が何回出現するかを数えればいい．
 
-`Shift`は数えるだけなので先に`Divide`を行う．`Divide`のやり方は高々、`2^(素因数の数)`だから全列挙してやればいい．あとは各々について`Shift`の回数を求める．
-
-のんきに数えてたらTLEしたので，剰余で考える必要があるのだが，これが難しかった．右に`Shift`する場合の式がよくわからなくて，手元のサンプルと帳尻を合わせるように書いたら通った（最悪）
+$X[i]$ (0-indexed)が出現する回数は，$X[i]$ より左側から $l$ 個，右側から $r$ 個取るとして
+$$
+\sum _ {l=0} ^ {i} \sum _ {r=0} ^ {N-1-i} {}_{i} \mathrm{C} _ {l} \times {} _ {N-1-i} \mathrm{C} _ {r}
+$$
+で表される．
 
 {{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/SRM/master/500-519/509Div1E_LuckyRemainder.cpp" >}}
