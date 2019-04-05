@@ -1,7 +1,7 @@
 ---
 title: "SRM505 Div1Easy RectangleArea"
 date: 2018-08-10T22:00:00+09:00
-draft: true
+draft: false
 tags: ["SRM","Math","Recursion"]
 topics: ["CompetitiveProgramming"]
 ---
@@ -15,7 +15,9 @@ http://community.topcoder.com/stat?c=problem_statement&pm=11400
 ## 方針
 図の赤枠のように長方形をとる．このとき，頂点と接する4つの小長方形に着目する．
 
-下図より，このうち3つの面積がわかっている(`Y`)ならば，残り1つの面積もわかる．このような作業を繰り返すといずれ盤面の`Y`が増えなくなるため，小長方形の面積を質問する必要がある．
+{{% fluid_img src="./images/rect.png" %}}
+
+図より，このうち3つの面積がわかっている(`Y`)ならば，残り1つの面積もわかる．このような作業を繰り返すといずれ盤面の`Y`が増えなくなるため，小長方形の面積を質問する必要がある．
 
 質問する小長方形はどれでもよさそうだが確証はない．
 
