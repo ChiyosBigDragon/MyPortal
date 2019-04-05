@@ -145,9 +145,9 @@ $v$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
 
 # 実装例
 
-- LCA( $V,root,edge$ ) := 頂点数 $V$，根 $root$ の根付き木 $edge$ に対する，EulerTourとRMQの構成．
+- LCA$(V,root,edge)$ := 頂点数 $V$，根 $root$ の根付き木 $edge$ に対する，EulerTourとRMQの構成．
     - $O(V)$
-- get( $u,v$ ) := 頂点 $u$ と $v$ のLCAを求める．
+- get$(u,v)$ := 頂点 $u$ と $v$ のLCAを求める．
     - $O(\log{V})$
 
 {{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/GraphTheory/LCA/LCA.cpp" >}}

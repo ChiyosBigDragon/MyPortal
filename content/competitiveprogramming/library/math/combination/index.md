@@ -1,6 +1,6 @@
 ---
 title: "Combination"
-draft: true
+draft: false
 ---
 
 # 概略
@@ -8,165 +8,88 @@ Combinationに係る諸計算のライブラリ
 
 # 目次
 - [アルゴリズム](#アルゴリズム)
-    - [Euler Tour](#euler-tour)
-    - [RMQ (Range Minimum Query)](#rmq-range-minimum-query)
+    - [逆元](#逆元)
+    - [パスカルの三角形](#パスカルの三角形)
 - [実装例](#実装例)
+    - [逆元](#inverse)
+    - [パスカルの三角形](#pascal)
 - [verify](#verify)
     - [AOJ 1501](#AOJ 1501)
-    - [ABC014_D](#ABC014_D)
+    - [yukicoder 117](#yuki_117)
+    - [ABC021_D](#ABC021_D)
 - [参考](#参考)
 
 # アルゴリズム
-Euler Tourで木に対する情報を拾った後，RMQでLCAを求める．
 
-例として下図の木にアルゴリズムを用いる．
+## 逆元
+$$ {}_{n} \mathrm{C} _ {r} = \frac{n!}{r!(n-r)!} $$
+なので分数のmodを求めたい気持ちになる．ここで逆元を使う．
 
-![](./images/tree.png)
+整数 $a$ と 素数 $p$ について
+$$ p = \left\lfloor \frac{p}{a} \right\rfloor \times a + p\%a $$
+mod $p$ とすると
+$$ 0 \equiv \left\lfloor \frac{p}{a} \right\rfloor \times a + p\%a $$
+$$ p\%a \equiv - \left\lfloor \frac{p}{a} \right\rfloor \times a $$
+$$ p\%a \times a^{-1} \equiv - \left\lfloor \frac{p}{a} \right\rfloor $$
+$$ a^{-1} \equiv - \left\lfloor \frac{p}{a} \right\rfloor \times (p\%a)^{-1} $$
 
-## Euler Tour
-木をDFSする．欲しい情報は以下の通り．
+ここで $p\%a < a$ であるから，小さい方から漸化的に求められる．
 
-- `nodeOrder[i]`: $i$ 番目に訪問した頂点番号
-- `depthOrder[i]`: $i$ 番目に訪問した頂点の深さ（根を0とする）
-- `nodeFirstID[v]`: 頂点 $v$ が最初に現れるタイミング
+なお，$0^{-1}$ の値は未定義なので，最終的な式において $p\%a \neq 0$ でなければならない．そのため $p$ は素数である．（正確には $p$ と $a$ が互いに素）
 
-$i$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
-:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
-`nodeOrder[i]` | 0 | 1 | 4 | 1 | 5 | 6 | 5 | 7 | 5 | 1 | 0 | 2 | 0 | 3 | 0
-`depthOrder[i]` | 0 | 1 | 2 | 1 | 2 | 3 | 2 | 3 | 2 | 1 | 0 | 1 | 0 | 1 | 0
+## パスカルの三角形
 
-$v$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
-:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
-`nodeFirstID[v]` | 0 | 1 | 11 | 13 | 2 | 4 | 5 | 7
+$$
+\begin{cases}
+{}_{n} \mathrm{C} _ {r} = {}_{n-1} \mathrm{C} _ {r-1} + {}_{n-1} \mathrm{C} _ {r} \\\ {}_{n} \mathrm{C} _ {0} = {}_{n} \mathrm{C} _ {n} = 1
+\end{cases}
+$$
 
-`nodeOrder`のサイズは必ず`頂点数*2-1`になる．これは各辺を2回通ることに由来する．
-
-## RMQ (Range Minimum Query)
-頂点 $u$ と $v$ のLCAは，$u$ から $v$ まで順に訪問した頂点のうち最も浅い（深さの小さい）ものである．これを効率的に求めるのがRMQである．
-
-頂点 $4$ と $7$ のLCAを求める．まず頂点の訪問順を調べる．
-
-<style type="text/css">
-    .tg .tg-c4ww{background-color:#cbcefb;}
-    .tg .tg-bolj{background-color:#ffccc9;}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-c3ow">$v$<br></th>
-    <th class="tg-c3ow">0</th>
-    <th class="tg-c3ow">1</th>
-    <th class="tg-c3ow">2</th>
-    <th class="tg-c3ow">3</th>
-    <th class="tg-bolj">4<br></th>
-    <th class="tg-c3ow">5</th>
-    <th class="tg-c3ow">6</th>
-    <th class="tg-c4ww">7</th>
-  </tr>
-  <tr>
-    <td class="tg-c3ow">`nodeFirstID[v]`</td>
-    <td class="tg-c3ow">0</td>
-    <td class="tg-c3ow">1</td>
-    <td class="tg-c3ow">11</td>
-    <td class="tg-c3ow">13</td>
-    <td class="tg-bolj">2<br></td>
-    <td class="tg-c3ow">4<br></td>
-    <td class="tg-c3ow">5</td>
-    <td class="tg-c4ww">7</td>
-  </tr>
-</table>
-
-したがって $4$ と $7$ のLCAは以下の色付き部分のうち最も浅い頂点であり，今回は $1(i=3)$ であることが分かる．
-
-<style type="text/css">
-    .tg{text-align:center;}
-    .tg .tg-bolj{background-color:#ffccc9;}
-    .tg .tg-nly6{background-color:#f5ccd4;}
-    .tg .tg-bhmg{background-color:#eacdde;}
-    .tg .tg-wspl{background-color:#e0cde8;}
-    .tg .tg-8vju{background-color:#d6cef2;}
-    .tg .tg-sh07{background-color:#cbcefb;}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-c3ow">$i$<br></th>
-    <th class="tg-c3ow">0</th>
-    <th class="tg-c3ow">1</th>
-    <th class="tg-bolj">2</th>
-    <th class="tg-nly6">3</th>
-    <th class="tg-bhmg">4<br></th>
-    <th class="tg-wspl">5</th>
-    <th class="tg-8vju">6</th>
-    <th class="tg-sh07">7</th>
-    <th class="tg-baqh">8</th>
-    <th class="tg-baqh">9</th>
-    <th class="tg-baqh">10</th>
-    <th class="tg-baqh">11</th>
-    <th class="tg-baqh">12</th>
-    <th class="tg-baqh">13</th>
-    <th class="tg-baqh">14</th>
-  </tr>
-  <tr>
-    <td class="tg-c3ow">`nodeOrder[i]`</td>
-    <td class="tg-c3ow">0</td>
-    <td class="tg-c3ow">1</td>
-    <td class="tg-bolj">4</td>
-    <td class="tg-nly6">1</td>
-    <td class="tg-bhmg">5</td>
-    <td class="tg-wspl">6</td>
-    <td class="tg-8vju">5</td>
-    <td class="tg-sh07">7</td>
-    <td class="tg-baqh">5</td>
-    <td class="tg-baqh">1</td>
-    <td class="tg-baqh">0</td>
-    <td class="tg-baqh">2</td>
-    <td class="tg-baqh">0</td>
-    <td class="tg-baqh">3</td>
-    <td class="tg-baqh">0</td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow">`depthOrder[i]`</td>
-    <td class="tg-c3ow">0</td>
-    <td class="tg-c3ow">1</td>
-    <td class="tg-bolj">2</td>
-    <td class="tg-nly6">1</td>
-    <td class="tg-bhmg">2</td>
-    <td class="tg-wspl">3</td>
-    <td class="tg-8vju">2</td>
-    <td class="tg-sh07">3</td>
-    <td class="tg-baqh">2</td>
-    <td class="tg-baqh">1</td>
-    <td class="tg-baqh">0</td>
-    <td class="tg-baqh">1</td>
-    <td class="tg-baqh">0</td>
-    <td class="tg-baqh">1</td>
-    <td class="tg-baqh">0</td>
-  </tr>
-</table>
+より漸化的に求められる．
 
 # 実装例
 
-- LCA( $V,root,edge$ ) := 頂点数 $V$，根 $root$ の根付き木 $edge$ に対する，EulerTourとRMQの構成．
-    - $O(V)$
-- get( $u,v$ ) := 頂点 $u$ と $v$ のLCAを求める．
-    - $O(\log{V})$
+<h2 id="inverse">逆元</h2>
+
+$n,r \leq 10^6 $ 程度を想定している．$p$ は素数．
+
+- Combination$(p)$ := mod $p$ 下で階乗，逆元，逆元の階乗を求める．
+    - $O(n)$
+- C$(n,r)$, P$(n,r)$, H$(n,r)$ := $ {}_{n} \mathrm{C} _ {r} , {}_{n} \mathrm{P} _ {r} , {}_{n} \mathrm{H} _ {r} $
+    - $O(1)$
+
+{{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Combination/inverse/combination.cpp" >}}
+
+<h2 id="pascal">パスカルの三角形</h2>
+
+$n,r \leq 10^3 $ 程度を想定している．$p$ は素数でなくてもよい．
+
+- CombinationOnPascal$(p)$ := mod $p$ 下で二項係数を計算する．
+    - $O(nr)$
+- C$(n,r)$, P$(n,r)$, H$(n,r)$ := $ {}_{n} \mathrm{C} _ {r} , {}_{n} \mathrm{P} _ {r} , {}_{n} \mathrm{H} _ {r} $
+    - $O(1)$
 
 {{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Combination/pascal/combination_pascal.cpp" >}}
 
 # verify
 <h4 id="AOJ 1501"><a href="https://onlinejudge.u-aizu.ac.jp/challenges/search/volumes/1501">AOJ1501 Grid &mdash; AIZU ONLINE JUDGE</a></h4>
-
-modulo 1,000,000,007 だと思っていたら～、<br>
-modulo 100,000,007 でした～。<br>
+mod 1,000,000,007 だと思っていたら～、<br>
+mod 100,000,007 でした～。<br>
 チクショー！！
 
 {{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Combination/pascal/verify/AOJ1501.cpp" >}}
 
-<h4 id="ABC014_D"><a href="https://atcoder.jp/contests/abc014/tasks/abc014_4">D: 閉路 - AtCoder Beginner Contest 014 &mdash; AtCoder</a></h4>
+<h4 id="yuki_117"><a href="https://yukicoder.me/problems/no/117">No.117 組み合わせの数 &mdash; yukicoder</a></h4>
 
-{{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/GraphTheory/LCA/verify/ABC014_D.cpp" >}}
+{{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Combination/inverse/verify/yuki117.cpp" >}}
+
+<h4 id="ABC021_D"><a href="https://atcoder.jp/contests/abc021/tasks/abc021_d">D - 多重ループ - AtCoder Beginner Contest 021 &mdash; AtCoder</a></h4>
+
+{{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Combination/inverse/verify/ABC021_D.cpp" >}}
 
 # 参考
 - [パスカルの三角形 &mdash; Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%91%E3%82%B9%E3%82%AB%E3%83%AB%E3%81%AE%E4%B8%89%E8%A7%92%E5%BD%A2)
+- [1~nまでの逆元をO(n)で求める方法 &mdash; takapt0226's diary](http://takapt0226.hatenablog.com/entry/2013/03/15/213551)
 - [よくやる二項係数 (nCk mod. p)、逆元 (a^-1 mod. p) の求め方 &mdash; けんちょんの競プロ精進記録](http://drken1215.hatenablog.com/entry/2018/06/08/210000)
 - [nCr mod mの求め方 &mdash; uwicoder](https://www37.atwiki.jp/uwicoder/pages/2118.html)
 - [コウメ太夫 (@dayukoume) &mdash; Twitter](https://twitter.com/dayukoume)
