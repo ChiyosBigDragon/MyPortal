@@ -49,6 +49,10 @@
     text-decoration: none;
 }
 
+.content strong {
+    color: #000;
+}
+
 code {
   color: #333;
   background-color: #eee;
