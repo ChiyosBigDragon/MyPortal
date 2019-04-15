@@ -1,8 +1,8 @@
 ---
 title: "SRM510 Div2Medium TheLuckyGameDivTwo"
 date: 2018-09-04T19:00:00+09:00
-draft: true
-tags: ["SRM","Digit DP"]
+draft: false
+tags: ["SRM","Brute Force"]
 topics: ["CompetitiveProgramming"]
 ---
 
@@ -10,22 +10,21 @@ topics: ["CompetitiveProgramming"]
 https://community.topcoder.com/stat?c=problem_statement&pm=11464
 
 ## 概略
-$[a,b]$ の整数のうち，$4,7$ 以外の数を2つ以上含まないものは何種類あるか．
+`Lucky number`は $4,7$ のみを含む数字である．
+
+JohnとBrusはゲームをする．先ずJohnが長さ`jLen`の区間を選ぶ．そのあとBrusが長さ`bLen`の区間を「Johnが選んだ区間」の中から選ぶ．Brusが選んだ区間に含まれる`Lucky number`の数がポイントになる．
+
+Johnがスコアを最大化するように，Brusがスコアを最小化するように戦術をとるとき，最終的なスコアはいくらになるか．
 
 ## 方針
-求めるものは
-$$b以下の種類数 - (a-1)以下の種類数$$
-と解釈することが出来る．
+範囲が $[1,4747]$ と狭いので全探索できそう．
 
-そこで次のDPテーブルを定義する．
-$$
-dp(n)[i][0/1][k][0/1] := nを上からi桁目まで見て/n以下が確定し/4,7以外の個数kで/i桁目までに0以外の数が出現する/ような種類数
-$$
-すると解は
-$$
-dp(b)[|b|][1][0/1][1] - dp(a-1)[|a-1|][1][0/1][1]
-$$
-で表される．ただし $|n|$ は $n$ の10進表記における桁数．
+Johnはスコアが大きくなるように，Brusはスコアが小さくなるように，それぞれ区間をとるというのがわかりにくい．こういう戦略最適化問題の場合，おおむね先手はエスパーなので，まずBrusの行動から考える．
 
+BrusはJohnの決めた区間のうち，スコアが小さくなるよう更に区間を定める．つまり，Johnの各選択に対してスコアは一意に確定することがわかる．こうなると後は単純で，Johnはこの内スコアが最も大きくなる選択をすればいい．数学でやる1文字固定に近い．
 
-{{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/SRM/master/500-519/510Div1E_TheAlmostLuckyNumbersDivOne.cpp" >}}
+どうせラッキーナンバーは少ないので，2進数を列挙する感覚で全部書き出した．春に受講した，ひたすらカルノー図を書く授業を思い出してちょっと鬱になった．
+
+Brusが全範囲の最小値を必死に探す中，Johnはそのうちの最大値を高みの見物で選ぶ．そんな主従関係が目に浮かぶと書きやすいですね．
+
+{{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/SRM/master/500-519/510Div2M_TheLuckyGameDivTwo.cpp" >}}
