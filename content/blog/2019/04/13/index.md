@@ -6,6 +6,8 @@ tags: ["GCJ","Write Up"]
 topics: ["CompetitiveProgramming"]
 ---
 
+[QualのWrite Upはここ](https://chiyosbigdragon.github.io/blog/2019/04/07/)
+
 # 結果
 aC2完45pt．1500人通過で1584th(多分)でした．まさかペナ差で落ちるとは…
 
