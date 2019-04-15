@@ -2,7 +2,7 @@
 title: "SRM510 Div1Easy TheAlmostLuckyNumbersDivOne"
 date: 2018-08-31T13:30:00+09:00
 draft: true
-tags: ["SRM","Digit DP"]
+tags: ["SRM","Digit DP","未完"]
 topics: ["CompetitiveProgramming"]
 ---
 

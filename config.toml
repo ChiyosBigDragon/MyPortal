@@ -63,7 +63,7 @@ pluralizeListTitles = false
   # by entering your username or ID.
 
   # SNS microblogging
-  twitter = "*"
+  # twitter = "*"
   # gnusocial = "*" # Specify href (e.g. https://quitter.se/yourusername)
   # facebook = "*"
   # googleplus = "*"
@@ -96,7 +96,7 @@ pluralizeListTitles = false
   # serverfault = "*"
 
   # Gaming
-  steam = "*"
+  # steam = "*"
   # mobygames = "*"
 
   # Music

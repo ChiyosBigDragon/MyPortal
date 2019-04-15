@@ -3,7 +3,7 @@ title: "RTX2060を買ったのでテスト"
 date: 2019-04-04T10:00:00+09:00
 draft: true
 topics: ["Game"]
-tags: ["other"]
+tags: ["other","未完"]
 ---
 
 ## 環境
