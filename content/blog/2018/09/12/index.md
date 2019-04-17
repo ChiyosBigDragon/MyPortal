@@ -10,7 +10,8 @@ topics: ["CompetitiveProgramming"]
 https://community.topcoder.com/stat?c=problem_statement&pm=11502
 
 ## 概略
-
+https://www.gog.com/game/the_incredible_machine_mega_pack
+https://store.steampowered.com/app/241240/Contraption_Maker/?l=japanese
 
 ## 方針
 サンプル1を見ると，1日だけいる場合と8日いる場合とでは，取る料理の種類が異なることがわかる．なので日を進めるたび，曜日( $7n$ 日前)の料理をおさらいして最小コストを再計算してやるとよい．
