@@ -8,3 +8,4 @@ draft: false
 
 # Math
 - [Combination](./math/combination)
+- [Matrix](./math/matrix)

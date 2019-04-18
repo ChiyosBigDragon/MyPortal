@@ -1,6 +1,6 @@
 ---
 title: "Matrix"
-draft: true
+draft: false
 ---
 
 # 概略
@@ -14,77 +14,84 @@ draft: true
 - [参考](#参考)
 
 # アルゴリズム
+特になし
 
 # 実装例
+- Matrix$(h,w)$ := $h$ 行 $w$ 列の行列を作成し，$0$ で初期化．
+- Matrix$(G)$ := 行列を2次元配列 $G$ で初期化．
+- height$()$, width$()$ := 行列のサイズを取得．
+    - $O(1)$
+- I$(n,x)$ := 単位元を $x$ とする $n$ 次単位行列．
+    - $O(n^2)$
+    - 零元も設定できるようにするべき？
+- 演算子オーバーロード
+    - 加法`+,+=`，差`-,-=` $O(n^2)$
+    - 乗法`*,*=` $O(n^3)$
+    - 添字アクセス`[]` $O(1)$
+- pow$(k)$ := 行列累乗
+    - $O(n^3logk)$
+    - 別でpower作って任意のクラスを載せられるほうがよくないか．取ってくるの面倒だけど
+- 必要になったら作るやつ
+    - 線形代数の勉強から始めないといけない
+    - スカラー倍
+    - 転置
+    - 行列式
+    - ランク
+    - トレース
+
+{{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Matrix/Matrix.cpp" >}}
 
 # verify
 <h4 id="ABC009_D"><a href="https://atcoder.jp/contests/abc009/tasks/abc009_4">D - 漸化式 - AtCoder Beginner Contest 009 &mdash; AtCoder</a></h4>
 
 $$
-    \begin{array}{ccc}
-        \left(
-            \begin{array}{ccc}
-                  A_{N+K} \\
-                  A_{N+K-1} \\
-                  A_{N+K-2} \\
-                  \vdots \\
-                  A_{N+1}
-            \end{array}
-        \right)
-        &=&
-        \left(
-            \begin{array}{ccc}
-                  C_1 & C_2 & \ldots & C_{K-1} & C_K \\
-                  1 & 0 & \ldots & 0 & 0 \\
-                  0 & 1 &  \ldots & 0 & 0 \\
-                  \vdots & \vdots & \ddots & \vdots & \vdots \\
-                  0 & 0 & \ldots & 1 & 0
-            \end{array}
-        \right)
-        \left(
-            \begin{array}{ccc}
-                  A_{N+K-1} \\
-                  A_{N+K-2} \\
-                  A_{N+K-3} \\
-                  \vdots \\
-                  A_{N}
-            \end{array}
-        \right) \\
-        &=&
-        \left(
-            \begin{array}{ccc}
-                  C_1 & C_2 & \ldots & C_{K-1} & C_K \\
-                  1 & 0 & \ldots & 0 & 0 \\
-                  0 & 1 &  \ldots & 0 & 0 \\
-                  \vdots & \vdots & \ddots & \vdots & \vdots \\
-                  0 & 0 & \ldots & 1 & 0
-            \end{array}
-        \right)^N
-        \left(
-            \begin{array}{ccc}
-                  A_{K} \\
-                  A_{K-1} \\
-                  A_{K-2} \\
-                  \vdots \\
-                  A_{1}
-            \end{array}
-        \right) \\
-    \end{array}
+\begin{aligned}
+    \left(
+        \begin{array}{ccc}
+            A _ {N+K} \\\ A _ {N+K-1} \\\ A _ {N+K-2} \\\ \vdots \\\ A _ {N+1}
+        \end{array}
+    \right)
+    =
+    \left(
+        \begin{array}{ccc}
+            C _ 1 & C _ 2 & \ldots & C _ {K-1} & C _ K \\\ 1 & 0 & \ldots & 0 & 0 \\\ 0 & 1 & \ldots & 0 & 0 \\\ \vdots & \vdots & \ddots & \vdots & \vdots \\\ 0 & 0 & \ldots & 1 & 0
+        \end{array}
+    \right)
+    \left(
+        \begin{array}{ccc}
+            A _ {N+K-1} \\\ A _ {N+K-2} \\\ A _ {N+K-3} \\\ \vdots \\\ A _ {N}
+        \end{array}
+    \right)
+\end{aligned}
 $$
 
-ANDの単位元が`UINT_MAX`であることに注意．
+$$
+\therefore
+\begin{aligned}
+    \left(
+        \begin{array}{ccc}
+            A _ {N+K} \\\ A _ {N+K-1} \\\ A _ {N+K-2} \\\ \vdots \\\ A _ {N+1}
+        \end{array}
+    \right)
+    =
+    \left(
+        \begin{array}{ccc}
+            C _ 1 & C _ 2 & \ldots & C _ {K-1} & C _ K \\\ 1 & 0 & \ldots & 0 & 0 \\\ 0 & 1 &  \ldots & 0 & 0 \\\ \vdots & \vdots & \ddots & \vdots & \vdots \\\ 0 & 0 & \ldots & 1 & 0
+        \end{array}
+    \right) ^ N
+    \left(
+        \begin{array}{ccc}
+            A _ {K} \\\ A _ {K-1} \\\ A _ {K-2} \\\ \vdots \\\ A _ {1}
+        \end{array}
+    \right)
+\end{aligned}
+$$
+
+AND演算の単位元が`UINT_MAX`であることに注意．
 
 {{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Matrix/verify/ABC009_D.cpp" >}}
 
 # 参考
-- [パスカルの三角形 &mdash; Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%91%E3%82%B9%E3%82%AB%E3%83%AB%E3%81%AE%E4%B8%89%E8%A7%92%E5%BD%A2)
-- [1~nまでの逆元をO(n)で求める方法 &mdash; takapt0226's diary](http://takapt0226.hatenablog.com/entry/2013/03/15/213551)
-- [よくやる二項係数 (nCk mod. p)、逆元 (a^-1 mod. p) の求め方 &mdash; けんちょんの競プロ精進記録](http://drken1215.hatenablog.com/entry/2018/06/08/210000)
-- [nCr mod mの求め方 &mdash; uwicoder](https://www37.atwiki.jp/uwicoder/pages/2118.html)
-- [コウメ太夫 (@dayukoume) &mdash; Twitter](https://twitter.com/dayukoume)
-
-https://ei1333.github.io/luzhiled/snippets/math/matrix.html
-http://www.learning-algorithms.com/entry/2017/10/13/193130
-https://emtubasa.hateblo.jp/entry/2018/09/07/131441
-https://yukicoder.me/problems/no/194
-https://yukicoder.me/problems/no/194
+- [行列演算(Matrix) &mdash; Luzhiled's memo](https://ei1333.github.io/luzhiled/snippets/math/matrix.html)
+- [行列ライブラリ &mdash; Learning Algorithms](http://www.learning-algorithms.com/entry/2017/10/13/193130)
+- [ABC009 D - 漸化式 &mdash; ツバサの備忘録](https://emtubasa.hateblo.jp/entry/2018/09/07/131441)
