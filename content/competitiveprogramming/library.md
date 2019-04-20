@@ -9,3 +9,4 @@ draft: false
 # Math
 - [Combination](./math/combination)
 - [Matrix](./math/matrix)
+- [ModInt](./math/mod_int)

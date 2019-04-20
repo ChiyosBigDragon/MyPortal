@@ -15,7 +15,7 @@ Combinationに係る諸計算のライブラリ
     - [パスカルの三角形](#pascal)
 - [verify](#verify)
     - [AOJ 1501](#AOJ 1501)
-    - [yukicoder 117](#yuki_117)
+    - [yukicoder No.117](#yuki_117)
     - [ABC021_D](#ABC021_D)
 - [参考](#参考)
 
