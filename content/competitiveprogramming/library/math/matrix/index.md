@@ -10,7 +10,9 @@ draft: false
 - [アルゴリズム](#アルゴリズム)
 - [実装例](#実装例)
 - [verify](#verify)
+    - [AOJ ITP1_7_D](#AOJ_ITP1_7_D)
     - [ABC009_D](#ABC009_D)
+    - [yukicoder No.194](#yuki_194)
 - [参考](#参考)
 
 # アルゴリズム
@@ -29,7 +31,7 @@ draft: false
     - 乗法`*,*=` $O(n^3)$
     - 添字アクセス`[]` $O(1)$
 - pow$(k)$ := 行列累乗
-    - $O(n^3logk)$
+    - $O(n^3\log k)$
     - 別でpower作って任意のクラスを載せられるほうがよくないか．取ってくるの面倒だけど
 - 必要になったら作るやつ
     - 線形代数の勉強から始めないといけない
@@ -42,6 +44,10 @@ draft: false
 {{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Matrix/Matrix.cpp" >}}
 
 # verify
+<h4 id="AOJ_ITP1_7_D"><a href="https://onlinejudge.u-aizu.ac.jp/problems/ITP1_7_D">行列の積 - ITP1_7_D &mdash; AIZU ONLINE JUDGE</a></h4>
+
+{{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Matrix/verify/ITP1_7_D.cpp" >}}
+
 <h4 id="ABC009_D"><a href="https://atcoder.jp/contests/abc009/tasks/abc009_4">D - 漸化式 - AtCoder Beginner Contest 009 &mdash; AtCoder</a></h4>
 
 $$
@@ -90,6 +96,59 @@ $$
 AND演算の単位元が`UINT_MAX`であることに注意．
 
 {{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Matrix/verify/ABC009_D.cpp" >}}
+
+<h4 id="yuki_194"><a href="https://yukicoder.me/problems/no/194">No.194 フィボナッチ数列の理解(1) &mdash; yukicoder</a></h4>
+
+$$
+\begin{cases}
+    F(k) = S(k-1) - S(k-n-1) \\\ S(k) = F(k) + S(k-1)
+\end{cases}
+$$
+
+$$
+\therefore S(k) = 2S(k-1) - S(k-n-1)
+$$
+
+$$
+\left(
+    \begin{array}{ccc}
+        S(k) \\\ S(k-1) \\\ \vdots \\\ S(k-n)
+    \end{array}
+\right) =
+\left(
+    \begin{array}{ccc}
+        2 & 0 & \ldots & 0 & -1 \\\ 1 & 0 & \ldots & 0 & 0 \\\ 0 & 1 & \ldots & 0 & 0 \\\ \vdots & \vdots & \ddots & \vdots & \vdots \\\ 0 & 0 & \ldots & 1 & 0
+    \end{array}
+\right)
+\left(
+    \begin{array}{ccc}
+        S(k-1) \\\ S(k-2) \\\ \vdots \\\ S(k-n-1)
+    \end{array}
+\right)
+$$
+
+$$
+\therefore
+\left(
+    \begin{array}{ccc}
+        S(k) \\\ S(k-1) \\\ \vdots \\\ S(k-n)
+    \end{array}
+\right) =
+\left(
+    \begin{array}{ccc}
+        2 & 0 & \ldots & 0 & -1 \\\ 1 & 0 & \ldots & 0 & 0 \\\ 0 & 1 & \ldots & 0 & 0 \\\ \vdots & \vdots & \ddots & \vdots & \vdots \\\ 0 & 0 & \ldots & 1 & 0
+    \end{array}
+\right) ^ {k-n}
+\left(
+    \begin{array}{ccc}
+        S(n) \\\ S(n-1) \\\ \vdots \\\ S(0)
+    \end{array}
+\right)
+$$
+
+要: [ModInt](../mod_int/)
+
+{{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Matrix/verify/yuki194.cpp" >}}
 
 # 参考
 - [行列演算(Matrix) &mdash; Luzhiled's memo](https://ei1333.github.io/luzhiled/snippets/math/matrix.html)
