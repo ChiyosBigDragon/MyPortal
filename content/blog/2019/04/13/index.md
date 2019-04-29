@@ -2,11 +2,13 @@
 title: "Google Code Jam 2019 - Round 1A"
 date: 2019-04-13T15:00:00+09:00
 draft: false
-tags: ["GCJ","Write Up"]
+tags: ["GCJ","WriteUp"]
 topics: ["CompetitiveProgramming"]
 ---
 
-[QualのWrite Upはここ](https://chiyosbigdragon.github.io/blog/2019/04/07/)
+- [QualのWrite](../07)
+- [R1AのWriteUp](../13)
+- [R1BのWriteUp](../29)
 
 # 結果
 aC2完45pt．1500人通過で~~1584th~~1567th(何故か上がった)でした．まさかペナ差で落ちるとは…
