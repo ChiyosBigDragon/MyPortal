@@ -1,6 +1,6 @@
 ---
 title: "Google Code Jam 2019 - Round 1C"
-date: 2019-05-05T01:00:00+09:00
+date: 2019-05-05T06:00:00+09:00
 draft: false
 tags: ["GCJ","WriteUp"]
 topics: ["CompetitiveProgramming"]
