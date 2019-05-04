@@ -6,12 +6,13 @@ tags: ["GCJ","WriteUp"]
 topics: ["CompetitiveProgramming"]
 ---
 
-- [QualのWrite](../07)
+- [QualのWriteUp](../07)
 - [R1AのWriteUp](../13)
 - [R1BのWriteUp](../29)
+- [R1CのWriteUp](../../05/05)
 
 # 結果
-Ac2完41pt．1815th．Round1Cに進出．
+Ac2完41pt．~~1815th~~．1811st．やっぱりちょっと上がりますね．Round1Cに進出．
 
 # A: Manhattan Crepe Cart
 ## 概略
@@ -49,4 +50,4 @@ $$
 {{< code language="cpp" src="./code/c.cpp" >}}
 
 # 感想
-$\sum{rank-1500}$ だったら1500th以内だと思うのでそれでどうにかなりませんか．
+$\sum{(rank-1500)}$ だったら1500th以内だと思うのでそれでどうにかなりませんか．
