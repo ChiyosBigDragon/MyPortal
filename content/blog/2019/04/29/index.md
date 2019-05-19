@@ -10,6 +10,7 @@ topics: ["CompetitiveProgramming"]
 - [R1AのWriteUp](../13)
 - [R1BのWriteUp](../29)
 - [R1CのWriteUp](../../05/05)
+- [R2のWriteUp](../../05/19)
 
 ## 結果
 Ac2完41pt．~~1815th~~．1811st．やっぱりちょっと上がりますね．Round1Cに進出．

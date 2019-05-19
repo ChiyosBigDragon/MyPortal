@@ -10,6 +10,7 @@ topics: ["CompetitiveProgramming"]
 - [R1AのWriteUp](../13)
 - [R1BのWriteUp](../29)
 - [R1CのWriteUp](../../05/05)
+- [R2のWriteUp](../../05/19)
 
 ## 結果
 aC2完45pt．1500人通過で~~1584th~~1567th(何故か上がった)でした．まさかペナ差で落ちるとは…
