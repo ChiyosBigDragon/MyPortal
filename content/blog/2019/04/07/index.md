@@ -10,6 +10,7 @@ topics: ["CompetitiveProgramming"]
 - [R1AのWriteUp](../13)
 - [R1BのWriteUp](../29)
 - [R1CのWriteUp](../../05/05)
+- [R2のWriteUp](../../05/19)
 
 ## 結果
 AB2完41ptで通過した．CDも解くつもりでいたが，Cで多倍長整数が必要なことに気付いてやる気を無くした．Round1以降に多倍長が出たらこの人はどうするつもりなのだろうか．

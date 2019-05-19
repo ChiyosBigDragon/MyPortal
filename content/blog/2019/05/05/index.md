@@ -10,6 +10,7 @@ topics: ["CompetitiveProgramming"]
 - [R1AのWriteUp](../../04/13)
 - [R1BのWriteUp](../../04/29)
 - [R1CのWriteUp](../05/05)
+- [R2のWriteUp](../05/19)
 
 ## 結果
 AB2完60pt．414th．なんかstraightforwardでした．ゲームを直前までしてたのがよかったのかも．
