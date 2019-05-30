@@ -1,6 +1,6 @@
 ---
 title: "SRM759 Div1Easy EllysThreePrimes"
-date: 2019-05-30T10:00:00+09:00
+date: 2019-05-30T09:00:00+09:00
 draft: false
 tags: ["SRM","Brute Force"]
 topics: ["CompetitiveProgramming"]
