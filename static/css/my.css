@@ -6,7 +6,11 @@
     margin-bottom: 50px;
     line-height: 1.6em;
     color: #555;
+<<<<<<< HEAD
     /* font-size: 110%; */
+=======
+    font-size: 110%;
+>>>>>>> 54248eef8b475d8bd295432f95cd5e31992bb1d4
     font-weight: 400;
 }
 .content h1,h2,h3 {

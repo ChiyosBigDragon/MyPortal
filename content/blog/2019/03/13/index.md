@@ -79,5 +79,9 @@ node index.js
 
 [ブログ]: https://blog.honjala.net/entry/2018/09/13/004442
 [検索]: https://tv.so-net.ne.jp/search/
+<<<<<<< HEAD
 [wiki]: https://ja.wikipedia.org/wiki/%E9%87%91%E5%B1%9E%E3%83%90%E3%83%83%E3%83%88_(%E3%81%8A%E7%AC%91%E3%81%84%E3%82%B3%E3%83%B3%E3%83%93)
+=======
+[wiki]: https://ja.wikipedia.org/wiki/%E9%87%91%E5%B1%9E%E3%83%90%E3%83%83%E3%83%88_(%E3%81%8A%E7%AC%91%E3%81%84%E3%82%B3%E3%83%B3%E3%83%93
+>>>>>>> 54248eef8b475d8bd295432f95cd5e31992bb1d4
 [^1]: [金属バット (お笑いコンビ) &mdash; Wikipedia][wiki]
