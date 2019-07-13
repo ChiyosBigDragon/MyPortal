@@ -1,20 +1,31 @@
 ---
-title: "LCA (Lowest Common Ancestor)"
-draft: false
+title: "Maximum flow"
+draft: true
 ---
+
+参考
+- [最大流(Dinic) &mdash; Luzhiled's memo](https://ei1333.github.io/luzhiled/snippets/graph/dinic.html)
+- [Dinic法 &mdash; tkw’s diary](http://vartkw.hatenablog.com/entry/2016/12/02/002703)
+- [最大流問題について. &mdash; れんしゅうちょう。](http://topcoder.g.hatena.ne.jp/Mi_Sawa/20140311)
+- [グラフネットワーク〜フロー&カット〜 &mdash; SlideShare](https://www.slideshare.net/hcpc_hokudai/flow-cut)
+- [ネットワークフロー入門 &mdash; hos.ac](http://hos.ac/slides/20150319_flow.pdf)
+
+verify
+- [AOJGRL_6_A 最大流](https://onlinejudge.u-aizu.ac.jp/challenges/search/volumes/GRL_6_A)
+- [AOJ1163 カードゲーム](https://onlinejudge.u-aizu.ac.jp/challenges/search/volumes/1163)
 
 # 概略
 根付き木における2頂点の共通祖先のうち，最も深いものを示す．
 
 # 目次
-- [アルゴリズム](#アルゴリズム)
-    - [Euler Tour](#euler-tour)
-    - [RMQ (Range Minimum Query)](#rmq-range-minimum-query)
-- [実装例](#実装例)
+- [概略](#%E6%A6%82%E7%95%A5)
+- [目次](#%E7%9B%AE%E6%AC%A1)
+- [アルゴリズム](#%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)
+  - [Euler Tour](#euler-tour)
+  - [RMQ (Range Minimum Query)](#rmq-range-minimum-query)
+- [実装例](#%E5%AE%9F%E8%A3%85%E4%BE%8B)
 - [verify](#verify)
-    - [AOJ GRL_5_C](#AOJ GRL_5_C)
-    - [ABC014_D](#ABC014_D)
-- [参考](#参考)
+- [参考](#%E5%8F%82%E8%80%83)
 
 # アルゴリズム
 Euler Tourで木に対する情報を拾った後，RMQでLCAを求める．
