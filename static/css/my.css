@@ -13,7 +13,8 @@
     color: #000;
 }
 .content p {
-    text-indent: 1em;
+	margin: 16px auto 16px 1.5em;
+    /* text-indent: 1em; */
 }
 
 .header {
@@ -59,12 +60,14 @@
 }
 
 code {
-  color: #333;
+  color: #a71d5d;
   background-color: #eee;
   padding: 0 3px;
   margin: 0 3px;
   border: 1px solid #ccc;
   font-family: consolas, "Courier New", monospace;
+  tab-size: 4;
+  -moz-tab-size: 4;
 }
 pre code {
   font-family: consolas, "Courier New", monospace;
@@ -98,4 +101,8 @@ table tr {
 td,th {
     padding: 6px 13px;
     border: 1px solid #ddd;
+}
+
+br {
+	margin: 0;
 }
