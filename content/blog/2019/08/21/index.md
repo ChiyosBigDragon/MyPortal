@@ -2,7 +2,7 @@
 title: "SRM681 Div1Easy FleetFunding"
 date: 2019-08-21T12:00:00+09:00
 draft: false
-tags: ["SRM", "Greedy", "Binary-Search"]
+tags: ["SRM", "Greedy", "Binary Search"]
 topics: ["CompetitiveProgramming"]
 ---
 

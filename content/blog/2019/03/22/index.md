@@ -2,7 +2,7 @@
 title: "SRM753 Div1Easy MaxCutFree"
 date: 2019-03-22T14:00:00+09:00
 draft: false
-tags: ["SRM","Graph Theory","Independent Set"]
+tags: ["SRM", "Graph Theory", "Independent Set", "DP"]
 topics: ["CompetitiveProgramming"]
 ---
 
