@@ -15,7 +15,9 @@ https://community.topcoder.com/stat?c=problem_statement&pm=13747&rd=16416
 ## 方針
 `dp[i][j] := 一番上の大きさがiで既にj個積んでいる確率`とします．パンケーキは大きい順に見ると遷移が簡単です．
 
-個数が $j$ で一番上が $k$ である山に積む場合を考えます．パンケーキ $i$ を引く確率は $\dfrac{1}{n - j}$ なので，`dp[i][j + 1]` = $\sum_{k}^{i - 1}$ `dp[k][j] / (n - j)`です．また $i$ を積む場合の確率はこれで網羅できていることになるので，その期待値は $\sum_{j}$ `dp[i][j] * d[i]`です．
+個数が $j$ で一番上が $k$ である山に積む場合を考えます．パンケーキ $i$ を引く確率は $\dfrac{1}{n - j}$ なので，`dp[i][j + 1]`について，$\sum_{k}^{i - 1}$  `dp[k][j] / (n - j)`です．
+
+また $i$ を積む場合の確率はこれで網羅できていることになるので，その期待値は $\sum_{j}$ `dp[i][j] * d[i]`です．
 
 {{< code language="cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/SRM/master/640-659/656Div1E_RandomPancakeStack.cpp" >}}
 
