@@ -106,3 +106,7 @@ td,th {
 br {
 	margin: 0;
 }
+
+summary {
+	display: list-item;
+}
