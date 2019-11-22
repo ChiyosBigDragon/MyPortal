@@ -1,6 +1,6 @@
 ---
 title: "ICPC 2019 Asia Yokohama Regional"
-date: 2019-11-22T23:00:00+09:00
+date: 2019-11-21T23:00:00+09:00
 draft: false
 tags: ["ICPC"]
 topics: ["CompetitiveProgramming"]
