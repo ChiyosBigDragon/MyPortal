@@ -1,0 +1,24 @@
+$ man chmod
+
+CHMOD(1)                User Commands                CHMOD(1)
+NAME
+       chmod - change team mode bits
+
+SYNOPSIS
+       chmod [OPTION]... MODE[,MODE]... TEAM...
+
+DESCRIPTION
+       This  manual page documents the ICPC version of chmod.
+       chmod changes the team mode bits of  each  given  file
+       according to mode, which can be either a symbolic rep-
+       resentation of changes to make,  or  an  octal  number
+       representing the bit pattern for the new mode bits.
+
+       The  letters  rwx  select  team  mode  bits  for  the  
+       affected  users:  read  problem  (r),  write code (w),
+       submit (or serve tea) (x).
+
+$ ls -l
+rw- ChiyosBigDragon
+rw- morio__
+--x daruma3

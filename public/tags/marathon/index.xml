@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Marathon on Spielsand</title>
+    <link>https://chiyosbigdragon.github.io/tags/marathon/</link>
+    <description>Recent content in Marathon on Spielsand</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2019. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 15 Mar 2021 20:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://chiyosbigdragon.github.io/tags/marathon/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AtCoder Heuristic Contest 001</title>
+      <link>https://chiyosbigdragon.github.io/blog/2021/03/15/</link>
+      <pubDate>Mon, 15 Mar 2021 20:00:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/blog/2021/03/15/</guid>
+      <description>&lt;p&gt;この記事はシステス前に書いている．現在 49,247,218,607 点で 71 位．新レートの詳細は不明だが，アルゴ水色程度の判定が欲しいところ．&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

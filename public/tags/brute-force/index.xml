@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Brute Force on Spielsand</title>
+    <link>https://chiyosbigdragon.github.io/tags/brute-force/</link>
+    <description>Recent content in Brute Force on Spielsand</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2019. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 02 Sep 2019 12:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://chiyosbigdragon.github.io/tags/brute-force/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SRM654 Div1Easy SquareScores</title>
+      <link>https://chiyosbigdragon.github.io/blog/2019/09/02/</link>
+      <pubDate>Mon, 02 Sep 2019 12:00:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/blog/2019/09/02/</guid>
+      <description> URL https://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13694&amp;amp;rd=16318
+概略 ?を含む文字列が与えられる．同じ文字種のみを含む連続部分文字列の個数がスコアとなる．?が確率 $P_i$ で変化するとき，スコアの期待値を求める．
+方針 文字種cと左端 $L$ を固定します．左端が $L$ である連続部分文字列の個数は $L$ から右に伸ばしていくことで $O(|S|)$ で求まります．期待値の線形性から，途中で?が来る場合には $P_c$ を乗じれば良く，これを全文字種，全左端で行って $O(|P||S|^2)$．
+[展開する]   </description>
+    </item>
+    
+    <item>
+      <title>SRM759 Div1Easy EllysThreePrimes</title>
+      <link>https://chiyosbigdragon.github.io/blog/2019/05/30/</link>
+      <pubDate>Thu, 30 May 2019 09:00:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/blog/2019/05/30/</guid>
+      <description>URL https://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=15436
+概略 5桁の素数 $A, B, C$ がある．各桁の和が与えられるので，これを満たす $(A, B, C)$ の組を1つ求める．ただし $A, B, C$ は互いに異なる．
+方針 $A, B$ を決め打つ全探索がしたくなる．5桁なので $O(n^2)$ は怪しいが，色々工夫すると通る．
+主な枝刈りは以下の通り．手元で1s前後．
+ エラトステネスの篩で $A, B$ の候補を絞る． $A &amp;lt; B$ とする． $C$ の1桁目は偶数でも $5$ でもないので，そこで探索を打ち切る． $C$ の最上位は $0$ ではないので，そこでも探索を打ち切る． $C$ の素数判定は篩の中を二分探索する．（これは怪しい）  [展開する]   反省 どう頑張っても1sかかるので，ジャッジを信じて投げたら通った．あとでシステスを通したら最大で400msだった．信仰心が足りない．</description>
+    </item>
+    
+    <item>
+      <title>SRM510 Div2Medium TheLuckyGameDivTwo</title>
+      <link>https://chiyosbigdragon.github.io/blog/2018/09/04/</link>
+      <pubDate>Tue, 04 Sep 2018 19:00:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/blog/2018/09/04/</guid>
+      <description> URL https://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=11464
+概略 Lucky numberは $4,7$ のみを含む数字である．
+JohnとBrusはゲームをする．先ずJohnが長さjLenの区間を選ぶ．そのあとBrusが長さbLenの区間を「Johnが選んだ区間」の中から選ぶ．Brusが選んだ区間に含まれるLucky numberの数がポイントになる．
+Johnがスコアを最大化するように，Brusがスコアを最小化するように戦術をとるとき，最終的なスコアはいくらになるか．
+方針 範囲が $[1,4747]$ と狭いので全探索できそう．
+Johnはスコアが大きくなるように，Brusはスコアが小さくなるように，それぞれ区間をとるというのがわかりにくい．こういう戦略最適化問題の場合，おおむね先手はエスパーなので，まずBrusの行動から考える．
+BrusはJohnの決めた区間のうち，スコアが小さくなるよう更に区間を定める．つまり，Johnの各選択に対してスコアは一意に確定することがわかる．こうなると後は単純で，Johnはこの内スコアが最も大きくなる選択をすればいい．数学でやる1文字固定に近い．
+どうせラッキーナンバーは少ないので，2進数を列挙する感覚で全部書き出した．春に受講した，ひたすらカルノー図を書く授業を思い出してちょっと鬱になった．
+Brusが全範囲の最小値を必死に探す中，Johnはそのうちの最大値を高みの見物で選ぶ．そんな主従関係が目に浮かぶと書きやすいですね．
+[展開する]   </description>
+    </item>
+    
+    <item>
+      <title>SRM508 Div1Easy DivideAndShift</title>
+      <link>https://chiyosbigdragon.github.io/blog/2018/08/22/</link>
+      <pubDate>Wed, 22 Aug 2018 16:30:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/blog/2018/08/22/</guid>
+      <description> URL https://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=11434
+概略 $1 \sim N$ のスロットが1列に並んでいる．プレイヤーは常にスロット $1$ の中身しか取得することができない．ゲームの目的は，開始時にスロット $M$ にあった中身を取得することである．
+スロットには2通りの操作を行うことが出来る．
+ Divide  $N$ を割り切れる素数 $p$ を選びスロットを $[1,\frac{N}{p}],[\frac{N}{p}+1,\frac{2N}{p}],…$ に分割する．この内，目的のスロットを含む部分列のみを保持する．その後，$N←\frac{N}{p}$とし，スロットの番号を $1 \sim \frac{N}{p}$ に振り直す．  Shift  スロットを左/右にシフトする．シフトするとスロット番号が $-1/+1$ だけ変化する．スロット $0$ は $N$ に，$N+1$ は $1$ に別途移動する．   最低で何回操作をすれば目的を達成できるか．
+方針 全然できなかった．調べたら「DivideとShiftの操作は可換」ということがわかって（証明は知らない）そこからはノーヒントで行けた．これで250ptなんだ…
+Shiftは数えるだけなので先にDivideを行う．Divideのやり方は高々、2^(素因数の数)だから全列挙してやればいい．あとは各々についてShiftの回数を求める．
+のんきに数えてたらTLEしたので，剰余で考える必要があるのだが，これが難しかった．右にShiftする場合の式がよくわからなくて，手元のサンプルと帳尻を合わせるように書いたら通った（最悪）
+[展開する]   </description>
+    </item>
+    
+  </channel>
+</rss>

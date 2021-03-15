@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ad hoc on Spielsand</title>
+    <link>https://chiyosbigdragon.github.io/tags/ad-hoc/</link>
+    <description>Recent content in Ad hoc on Spielsand</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2019. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 05 Sep 2018 09:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://chiyosbigdragon.github.io/tags/ad-hoc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SRM511 Div1Easy Zoo</title>
+      <link>https://chiyosbigdragon.github.io/blog/2018/09/05/</link>
+      <pubDate>Wed, 05 Sep 2018 09:00:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/blog/2018/09/05/</guid>
+      <description> これ本家のカテゴリが Recursion なんですけど，どうなんですかね．
+URL https://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=11485
+概略 ウサギとネコが合わせて $N$ 匹いる．彼らの身長は互いに異なる．
+1匹ずつに次の質問をする． 「あなたと同じ種類で，あなたよりも身長が高い動物は何匹いるか？」
+彼らの回答が全て正しいものとするとき，それを構成するウサギまたはネコの割り当ては何通りあるか．
+補足 {0,0,1,1,2}という回答が得られたとき，ウサギをR，ネコをCとすると，
+ {R,C,R,C,R} {R,C,R,C,C} {R,C,C,R,R} {R,C,C,R,C} {C,R,R,C,R} {C,R,R,C,C} {C,R,C,R,R} {C,R,C,R,C}  の8通りが考えられます．
+方針 $2^{40}$ をシミュレートすることはまず無理．
+とりあえずanswersをソートしてみる．ウサちゃんもネコちゃんも同じ身長の同種はいないとのことなので，構築可能であるとき，
+answers={0,0,1,1,2,2,…,n-1,n-1,n,n+1,n+2,…,m}
+になる．逆にこうでないものは全て弾く必要があってこれが結構面倒．実装ではmapで数えてuniqueを取っている．
+各数字へのウサギとネコの割り振り方は，
+$$ 2(多いほうがウサギかネコの2通り) \times 2^{n} = 2^{n+1} $$
+[展開する]   </description>
+    </item>
+    
+    <item>
+      <title>SRM503 Div1Easy ToastXToast</title>
+      <link>https://chiyosbigdragon.github.io/blog/2018/07/31/</link>
+      <pubDate>Tue, 31 Jul 2018 16:00:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/blog/2018/07/31/</guid>
+      <description> URL http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=11204
+概略 $N$ 種のパンについての情報underとoverが与えられる．各種のパンには $X_i$ が定められており，これより小さいパンはunder，大きいパンはoverである．$\min N$ はいくらであるか．条件を満たすパンが存在しない場合-1を返す．
+方針 最初サンプル3の意味がわからなくて焦った.
+1列に並べた時に
+ 左端にover || 右端にunder  そんなパンはないので，-1  underとoverが完全に分かれている  Xがその間に置けて，1  その他  下図より，2（のはず）   [展開する]   </description>
+    </item>
+    
+  </channel>
+</rss>

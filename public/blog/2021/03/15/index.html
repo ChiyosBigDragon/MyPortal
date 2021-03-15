@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.56.3" />
+
+  <title>AtCoder Heuristic Contest 001 &middot; Spielsand</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github-gist.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://chiyosbigdragon.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+    
+        <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/my.css">
+    
+  
+  
+    
+        <script src="https://chiyosbigdragon.github.io/js/srcReader.js"></script>
+    
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://chiyosbigdragon.github.io/">Spielsand</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/blog/"><i class='fa fa-list fa-fw'></i>Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/competitiveprogramming/"><i class='fa fa-bug fa-fw'></i>C-Programming</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/ChiyosBigDragon" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2019. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+    <h1>AtCoder Heuristic Contest 001</h1>
+    <h2><a href="https://chiyosbigdragon.github.io/blog">Blog</a> >> AtCoder Heuristic Contest 001</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Mar 2021, 20:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/marathon">Marathon</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>この記事はシステス前に書いている．現在 49,247,218,607 点で 71 位．新レートの詳細は不明だが，アルゴ水色程度の判定が欲しいところ．</p>
+
+<h2 id="解法">解法</h2>
+
+<p>素直に焼きなました．評価値は丸める前のスコアを使った．遷移は 2 つ．</p>
+
+<ol>
+<li>矩形を 1 つ選び，適当な直線で分割．要求点を含まないほうを削除したのち，<strong>もう一方を拡張</strong>．</li>
+<li>矩形を 1 つ選び，適当な直線で分割．要求点を含まないほうを削除したのち，<strong>別の矩形を拡張</strong>．</li>
+</ol>
+
+<p>過程ではスコアが複数あったり，遷移も 5 つほど作成したりしているが，試行しているうちに上記の結果に落ち着いた．各変更の有効度をなんでもいい<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>ので把握しておくことは大事．</p>
+
+<p>結局，よく見る「矩形を 1 つ選んで +1 だけ拡張して，他の矩形は重複部分を避ける」遷移は採用していない．理由としては，自分の実装では重複判定に $O(N)$ かけている分，拡張する遷移は総じて重く，±1 程度の近傍では時間内の収束が見込めなかったからである．意外と 5 sec は短い．ただ，最終的な解も時間内に収束しないようで，高速化が肝だったが頑張れなかった．</p>
+
+<p>もう少し付け加えると，必要以上に面積を大きくとるメリットは無いはず（一矩形が得る微妙な点の違いよりも，複数矩形の自由度のほうが重要）という感覚があり，各矩形の面積は基本的に要求と同じかそれより小さくしてある．このとき，面積の増減とスコアの増減が大体一致する．また，スコア計算式は 2 乗を含むため，各矩形はバランスよく面積条件を満たすべきである．以上から，複数矩形の面積が減少する遷移は改善が刺さりにくい．</p>
+
+<h3 id="遷移-1">遷移 1</h3>
+
+<p>「矩形を 1 つ選び，適当な直線で分割．要求点を含まないほうを削除したのち，もう一方を拡張．」</p>
+
+<p><center>
+<figure class="center">
+    <img src="./images/1.png" width="480"/> 
+</figure>
+
+</center></p>
+
+<p>分割のみを一遷移とするとスコアが確実に悪化するので，拡張と抱き合わせている．拡張する方向は任意だが，実装では切る方向と同一（図では矩形 1 を水平に切ったので，水平方向に拡張）とした．拡張量は上限を求めておいて三分探索すると最適がわかる．上限を求めるパートに工夫がないので，$O(N + \log W)$．$W$ は盤面の一辺．</p>
+
+<p>分割しないでただ拡張するパターンもあったが，各矩形の面積は基本的に最適－ε で，分割しないと大抵のケースで拡張量 0 になる感じがあり採用しなかった．</p>
+
+<h3 id="遷移-2">遷移 2</h3>
+
+<p>「矩形を 1 つ選び，適当な直線で分割．要求点を含まないほうを削除したのち，別の矩形を拡張．」</p>
+
+<p><center>
+<figure class="center">
+    <img src="./images/2.png" width="480"/> 
+</figure>
+
+</center></p>
+
+<p>「この矩形は明らかに邪魔」みたいなパターンが多かったので採用．拡張時に全矩形を見てしまうと $O(N\log W)$ だが，この遷移で恩恵を受けるのは消滅部分と接している矩形のみなので，そこで枝刈りする．</p>
+
+<h2 id="思いついたが-やっていないこと">（思いついたが）やっていないこと</h2>
+
+<ul>
+<li>重複を許す遷移
+
+<ul>
+<li>罰則の決め方がいまいちわからず，失敗すると 0 点なので安全側に倒した．</li>
+<li>あとで「係数を動的に変更する」方法を見かけて確かにとなった．</li>
+</ul></li>
+<li>条件を満たさない矩形の作成
+
+<ul>
+<li>一つ犠牲にして他でスコアを稼げるケースはもちろんあると思う．</li>
+<li>一度条件を満たさなくなった矩形を再度復活させるのは，スコアの期待値としてかなりマイナスで実装する気にならなかった．</li>
+<li>上位のスコア的にそんなことしてないだろとも思った．</li>
+</ul></li>
+<li>スコアの工夫
+
+<ul>
+<li>本番スコア + サブスコア みたいなことをしていた．</li>
+<li>縦横比
+
+<ul>
+<li>向きが揃って良いと思ったが，幅 1 の矩形がたくさん出現した挙句，拡張すると面積が異常に増えるので遷移が成功しにくい．</li>
+</ul></li>
+<li>要求位置と頂点のマンハッタン距離
+
+<ul>
+<li>これが優先されると BLF 法のようになると思っていたが，そんなことはない．</li>
+</ul></li>
+</ul></li>
+<li>高速化
+
+<ul>
+<li><code>left[i] := 左上の頂点の x 座標が i である矩形の id</code></li>
+<li>重複判定が軽くなって嬉しいつもりが，$N \sim 50$ 程度だと普通に見たほうが早く，$N \sim 200$ で等速ぐらい．</li>
+<li>実装が下手だっただけかもしれない．</li>
+</ul></li>
+</ul>
+
+<h2 id="思いついていない-やればよかったこと">（思いついていない）やればよかったこと</h2>
+
+<ul>
+<li>多点スタート
+
+<ul>
+<li>初期解が優れていることのありがたみを忘れていた．</li>
+</ul></li>
+<li>参加記や上位の提出をあまり追えていない…</li>
+</ul>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>初 Rust．
+
+<ul>
+<li>実装がそこまで複雑にならなかったのであまり恩恵を感じなかった．</li>
+<li>むしろ C++ で書いていたら収束してたんじゃないかという不安が強かった．</li>
+<li>書きにくさとかは全くなく，そこは嬉しかった．</li>
+</ul></li>
+<li>最初 2 sec だと思って提出していた．
+
+<ul>
+<li>気付いて提出し直したが，特にスコアは変わらなかった．</li>
+</ul></li>
+<li>ツールを少し作った．
+
+<ul>
+<li>ハル研プロコンのスコアマップを気に入っていたので，そこに生成した svg をかぶせた．</li>
+<li>スコアが露骨に低いケースを潰すのに役立つ．</li>
+<li>焼きなましそのもののビジュアライザが流れてきて羨ましかったので，次回以降の課題．</li>
+</ul></li>
+<li>久々のブログ
+
+<ul>
+<li>今更気づいたがスマホから見ることを考えていないレイアウト．ごめん…</li>
+</ul></li>
+</ul>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">実際には，遷移のデバッグ作業中に切り分けて実行していたらスコアが改善した．
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://chiyosbigdragon.github.io/blog/2019/11/21/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://chiyosbigdragon.github.io/blog/2019/11/21/">ICPC 2019 Asia Yokohama Regional</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'chiyosbigdragon';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$",   right: "$",   display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "$$",   right: "$$",   display: true },
+                { left: "\\[", right: "\\]", display: true  },
+            ],
+        });
+    });
+    </script>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,600&amp;subset=japanese" rel="stylesheet">
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126147693-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-126147693-2');
+    </script>
+

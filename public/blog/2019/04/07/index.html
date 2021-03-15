@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.56.3" />
+
+  <title>Google Code Jam 2019 - Qualification Round &middot; Spielsand</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github-gist.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://chiyosbigdragon.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+    
+        <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/my.css">
+    
+  
+  
+    
+        <script src="https://chiyosbigdragon.github.io/js/srcReader.js"></script>
+    
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://chiyosbigdragon.github.io/">Spielsand</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/blog/"><i class='fa fa-list fa-fw'></i>Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/competitiveprogramming/"><i class='fa fa-bug fa-fw'></i>C-Programming</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/ChiyosBigDragon" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2019. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+    <h1>Google Code Jam 2019 - Qualification Round</h1>
+    <h2><a href="https://chiyosbigdragon.github.io/blog">Blog</a> >> Google Code Jam 2019 - Qualification Round</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>07 Apr 2019, 19:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/gcj">GCJ</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/writeup">WriteUp</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  
+
+<ul>
+<li><a href="../07">QualのWriteUp</a></li>
+<li><a href="../13">R1AのWriteUp</a></li>
+<li><a href="../29">R1BのWriteUp</a></li>
+<li><a href="../../05/05">R1CのWriteUp</a></li>
+<li><a href="../../05/19">R2のWriteUp</a></li>
+</ul>
+
+<h2 id="結果">結果</h2>
+
+<p>AB2完41ptで通過した．CDも解くつもりでいたが，Cで多倍長整数が必要なことに気付いてやる気を無くした．Round1以降に多倍長が出たらこの人はどうするつもりなのだろうか．</p>
+
+<h2 id="a-foregone-solution">A: Foregone Solution</h2>
+
+<h3 id="概略">概略</h3>
+
+<p>正整数 $N$ が渡されるので $N=A+B$ となるように分割する．ただし $A,B$ は正整数で $4$ を含んではならない．</p>
+
+<p>$N$ には1つ以上 $4$ が含まれる．</p>
+
+<h3 id="雑感">雑感</h3>
+
+<p>読みやすくて助かる．桁ごとに見て，$4$ を $2+2$ に分解すればよさそう．この出力形式誰が得するんだ．</p>
+
+<div class="SyntaxHighlight">
+	<div align="right" style="color: #3b8bba; margin:-10px 0px -10px 0px; cursor: pointer;">[展開する]</div>
+	<pre><code class="language-cpp" src="./code/a.cpp"></code></pre>
+</div>
+
+
+<h2 id="b-you-can-go-your-own-way">B: You Can Go Your Own Way</h2>
+
+<h3 id="概略-1">概略</h3>
+
+<p>正方形のグリッドを左上から右下に動く人がいる．この人と経路を共有しないように左上から右下に向かうにはどう動けばいいか．</p>
+
+<h3 id="雑感-1">雑感</h3>
+
+<p>即座に反転が思いついたがなぜか解法から外してしまった．まったく意味がわからない．結局場合分けをして解いた．結構重くなってしまった．</p>
+
+<ul>
+<li>左上から出る向きと右下に入る向きが違うとき</li>
+</ul>
+
+<p><img src="./images/ES.png" width="300px"></p>
+
+<p>図のように端を通る．</p>
+
+<ul>
+<li>左上から出る向きと右下に入る向きが同じとき</li>
+</ul>
+
+<p><img src="./images/EE.png" width="300px"></p>
+
+<p>鳩の巣原理から，同一方向に2連続で動くことがあるので，そこを狙って1回だけ交わる．図だと赤点を狙い撃ちしている．</p>
+
+<div class="SyntaxHighlight">
+	<div align="right" style="color: #3b8bba; margin:-10px 0px -10px 0px; cursor: pointer;">[展開する]</div>
+	<pre><code class="language-cpp" src="./code/b.cpp"></code></pre>
+</div>
+
+
+<h2 id="感想">感想</h2>
+
+<p>通過するだけなら意外と簡単だった．「<em>Google Code Jam 2019 - Qualification Round通過</em> 」って字面だけ見たら激強に見えるな．Googleすごい．実際に強いと言えるのはTシャツを貰ってからだと思っているので，そこまでは頑張りたい．調べたら残りの参加者は27610人らしい．1000/27610…</p>
+
+
+  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://chiyosbigdragon.github.io/blog/2019/03/27/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://chiyosbigdragon.github.io/blog/2019/03/27/">ブログ記事中のスニペットを外部参照する</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://chiyosbigdragon.github.io/blog/2019/04/08/">BeautifulSoup4で某番組HPをスクレイピング</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://chiyosbigdragon.github.io/blog/2019/04/08/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'chiyosbigdragon';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$",   right: "$",   display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "$$",   right: "$$",   display: true },
+                { left: "\\[", right: "\\]", display: true  },
+            ],
+        });
+    });
+    </script>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,600&amp;subset=japanese" rel="stylesheet">
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126147693-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-126147693-2');
+    </script>
+

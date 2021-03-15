@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Spielsand</title>
+    <link>https://chiyosbigdragon.github.io/tags/python/</link>
+    <description>Recent content in Python on Spielsand</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2019. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 08 Apr 2019 23:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://chiyosbigdragon.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>BeautifulSoup4で某番組HPをスクレイピング</title>
+      <link>https://chiyosbigdragon.github.io/blog/2019/04/08/</link>
+      <pubDate>Mon, 08 Apr 2019 23:00:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/blog/2019/04/08/</guid>
+      <description>今回はここのページをスクレイピングします．使途未定ですが，同一人物の写真が大量にあるので解析に使えるかもしれないし使えないかもしれない．
+春の番組改編でリニューアルしてましたけど何にも変わってなかったですね．でもホームページだけは変わってるんですよ．古いページは任天堂1を除いて十中八九消される運命なので救出しなければなりません．すでにバナー消えてたし．
+解析 http://www.ntv.co.jp/anothersky/fashion/index.html http://www.ntv.co.jp/anothersky/fashion/index_2.html http://www.ntv.co.jp/anothersky/fashion/index_3.html … http://www.ntv.co.jp/anothersky/fashion/index_25.html  &amp;lt;div class=&amp;quot;entryBox clearfix&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;img&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;画像1&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;画像2&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;entryBody&amp;quot;&amp;gt; &amp;lt;h3&amp;gt;日付&amp;lt;/h3&amp;gt; &amp;lt;p&amp;gt;詳細&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  another skyの雰囲気良いですよね．シンプルで洗練された印象があります．一つ気に食わない点があって，ワイプが斜めなんですよ．そこだけ変に立体感があってゴチャっと見えるというか．惜しい．
+スクレイピング def scrape(soup) : pages = soup.find_all(class_=&#39;entryBox clearfix&#39;) for page in pages : div = page.find(class_=&#39;entryBody&#39;) # 日付取得 date = &#39;&#39;.join(div.find(&#39;h3&#39;).text.split()) dir = &#39;./data/&#39; + date + &#39;/&#39; os.mkdir(dir) # 詳細取得 details = div.find(&#39;p&#39;).text with open(dir + str(&#39;details.txt&#39;), &#39;w&#39;, encoding=&#39;utf-8&#39;) as file : file.</description>
+    </item>
+    
+  </channel>
+</rss>

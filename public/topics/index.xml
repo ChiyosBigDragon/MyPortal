@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Topics on Spielsand</title>
+    <link>https://chiyosbigdragon.github.io/topics/</link>
+    <description>Recent content in Topics on Spielsand</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2019. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 15 Mar 2021 20:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://chiyosbigdragon.github.io/topics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CompetitiveProgramming</title>
+      <link>https://chiyosbigdragon.github.io/topics/competitiveprogramming/</link>
+      <pubDate>Mon, 15 Mar 2021 20:00:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/topics/competitiveprogramming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://chiyosbigdragon.github.io/topics/programming/</link>
+      <pubDate>Mon, 08 Apr 2019 23:00:00 +0900</pubDate>
+      
+      <guid>https://chiyosbigdragon.github.io/topics/programming/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

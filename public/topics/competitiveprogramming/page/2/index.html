@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.56.3" />
+
+  <title>CompetitiveProgramming &middot; Spielsand</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+  <link rel="alternate" type="application/rss+xml" title="Spielsand"
+    href='https://chiyosbigdragon.github.io/topics/competitiveprogramming/index.xml' />
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github-gist.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://chiyosbigdragon.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+    
+        <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/my.css">
+    
+  
+  
+    
+        <script src="https://chiyosbigdragon.github.io/js/srcReader.js"></script>
+    
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://chiyosbigdragon.github.io/">Spielsand</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/blog/"><i class='fa fa-list fa-fw'></i>Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/competitiveprogramming/"><i class='fa fa-bug fa-fw'></i>C-Programming</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href='https://chiyosbigdragon.github.io/topics/competitiveprogramming/index.xml'><i
+          class="fas fa-rss fa-fw"></i>RSS</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/ChiyosBigDragon" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2019. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+    <h1>CompetitiveProgramming</h1>
+    <h2><a href="https://chiyosbigdragon.github.io/blog">Blog</a> >> <a href="https://chiyosbigdragon.github.io/topics/">Topics</a> >> CompetitiveProgramming</h2>
+</div>
+
+<div class="content">
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/08/15/">SRM757 Div1Easy CentipedeSocks</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Aug 2019, 12:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/srm">SRM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/greedy">Greedy</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  URL https://community.topcoder.com/stat?c=problem_statement&amp;pm=15445&amp;rd=17496
+概略 足が $F$ 本のムカデが $C$ 匹いる．それぞれのムカデはすべての足に同じ色の靴下を履かないと満足しない．靴下はビンに入っていて，各色の本数の内訳はvectorで示される．ビンからランダムに靴下を取り出していき，同色が $F$ 本揃った時点でムカデに履かせる．
+すべてのムカデが満足するためにビンから取り出す靴下の本数の最大値を求める．
+方針 最終的にできるだけ多くの靴下を無駄にしたいです．そこで次のような貪欲を考えます．
+「残りの本数から $F$ 本取ったあとに追加で取れる本数の多い順に取る」 わかりづらいので実装したアルゴリズムを使って，適当な入力を処理します．あとは頑張ってください．
+F = 5, s(sockCounts) = {1, 3, 6, 7, 10, 14}とします．
+ Fに満たないものを全部取ります．  ans += 1 + 3 s = {6, 7, 10, 14}  sをソートして貪欲に取っていきます．ルールは「F本取ったあとに追加で取れる本数の多い順に取る」です．括弧内が指標です．F本取れる場合にはカウントCが減っていきます．今回はC = 5とします．  {14(4), 10(4), 7(2), 6(1)} {10(4), 9(4), 7(2), 6(1)}  C = 4 ans += 5  {9(4), 5(4), 7(2), 6(1)}  C = 3 ans += 5  {5(4), 4(4), 7(2), 6(1)}  C = 2 ans += 5
+  </p>
+
+  
+  <footer>
+    <a href="https://chiyosbigdragon.github.io/blog/2019/08/15/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/08/14/">SRM715 Div1Easy MaximumRange</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 Aug 2019, 12:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/srm">SRM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/greedy">Greedy</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+   URL https://community.topcoder.com/stat?c=problem_statement&amp;pm=14613
+概略 +，-からなる文字列がある．+はインクリメント，-はデクリメントに相当する．初期値を0として左から操作を行い，操作中の最大値と最小値の差がスコアになる．
+与えられた文字列の部分列についても同様に操作が行えるとき，スコアの最大値はいくらであるか．
+方針 +または-のみを取ることで簡単にスコアを最大化できます．最大値と最小値のペアを $(\max, \min)$ と表すことにします．+のみが $A$ 個ある操作列は $(A, 0)$ で，スコアは $A$ です．ここに-を $B$ 個加えてみましょう．スコアを上げるには最小値を小さくするしかなく，相殺する位置には置けません．
+ 先頭に加えたとき : $(\max(A - B, 0), -B)$  スコア : $\max(A, B)$  殿に加えたとき : $(A, \min(A - B, 0))$  スコア : $\max(A, B)$   が考えられますが，これは結局，+または-のみを取れば良いことを示しています．
+[展開する]   
+  </p>
+
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/07/13/">ICPC 2019 Yokohama Regional Online First Round Contest</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Jul 2019, 11:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/icpc">ICPC</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  ABC3完で45位/学内2位，選抜順位だと32位でしょうか．よくわかっていません．とりあえずアジアには進めそうです．裏目標の「ホスト枠を自チームで潰さない」が達成できたので良かったです．
+チーム 「chmod rw-rw&mdash;x」は学科同期3人のチームでした．あえてIDで書きます．
+ ChiyosBigDragon morio__ daruma3   構文解析と幾何だけは担当がありますが，それ以外は適当です．
+作戦 練習会や模擬国内を経験して，本番は次のようなフローで臨みました．
+ 印刷タスク + A（考察実装：もりを） B と C の実装の軽いほう（考察実装：ぼく） (B or C) と D の実装の軽いほう（考察：だるまともりを，実装：もりを） …  Cまでは自明問（実装は知らない）が出ると仮定して，3完早解き(+1,2完)を狙っています．学内の状況を考えると4完で確定ラインなのですが，4完前提の立ち回りをして壊滅すると不味いので，3完まで確実に潰し累積ペナルティを減らしに行きます．学内上位ならば最悪†ホスト校†で拾ってくれるので，悪い作戦ではないように見えますが，これを考える人の性格は悪そうです．
+本番 始まると同時にもりをが印刷タスクを投げます．学内の印刷機にはログインをしなければいけないのですが，ログインすると既にタスクが上がっていて流石でした．今年は印刷機が遠かったので歩きながら問題に目を通すと，Bの実装が無なことに気付きます．だるまにAの次がBであることを伝え，代わりにCをやってもらいます．FAのプロもりをにかかれば，Aは扇風機の前のガリガリ君レベルで溶けてしまうので，わずかな待機時間でできるだけ問題や入力を頭に叩き込みました．
+Bは空文字以外ユニークが強すぎる．mapで文字ごとに座標を記録しておけば，各回の操作回数はマンハッタン距離 $+1$ です．ほとんどミスなしでしたがFAとはなりませんでした．高級寿司店で損をする人間なので妥当な結果です．2完．
+Cの考察が不十分らしいので，問題概要を聞いて考察に参加します．$3^n$ で重さを列挙すること，必要な分銅をmapで持つことまで方針を固めたところで実装に移りました．割と非自明だったのでペアプロです．途中まで良かったのですが肝心の答えが合いません．やっぱり考察と実装は分けるべきですね．手動解とエラー出力を突き合わせながらデバッグをすると，手持ちの分銅でどうにかなる薬を除去していないことに気付きます．ここで解法が確信に変わったので後のデバッグはサンプルが合うようにエスパーで修正していきます．完成したところで本入力を食わせると中々に時間がかかっていてビビりますが，ICPCはこんなものという印象があるのでそのまま提出します．3完．
+ここでいったん順位表を見ます．正直，Cに時間をかけすぎたと思っていたので，学内1位を確認したときにはかなり安心しました．他の問題に目を通すと，
+ D : セグ木みたいな操作しそう E : $5! \times 8^5$ をやるだけ？実装が重すぎる F : 操作してできるグラフが $O(2^n)$ ないか？ G : $10^{18}$ の構文解析はもはやトラウマと言っても良い  という印象．Eはやるだけですが，順位表から嫌な雰囲気が出ていたのでDを解くことに．
+この後，2時間ぐらい椅子を温めます．Dで区間DPを実装しますが合いません．考察が間違っています．ここでEに切り替えることができれば4完だったかもしれませんが，謎の自信でデバッグをしていきます．切り替えたいがEを実装する時間はないみたいな状況になって終了．だるまがEを詰めてくれていたのに申し訳ない気持ち．
+おわり 最終盤で学内2位に落ちてからお祈りモードでした．終わってみると通常の選抜枠で抜けていますが，若干の不完全燃焼感があります．裏目標は上で述べたとおりですが，表目標は「ボーダーが発生しない完答数で通過」でした．今回だと4完以上です．アジア予選までは時間があるので精進を頑張ろうと思います．大学から支援が出るとか出ないとか（多分出ないけど）の話があるので国外も視野に入れています．ワクワクコンテストとか出てみたいですね．
+  </p>
+
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/05/30/">SRM759 Div1Easy EllysThreePrimes</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 May 2019, 09:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/srm">SRM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/brute-force">Brute Force</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  URL https://community.topcoder.com/stat?c=problem_statement&amp;pm=15436
+概略 5桁の素数 $A, B, C$ がある．各桁の和が与えられるので，これを満たす $(A, B, C)$ の組を1つ求める．ただし $A, B, C$ は互いに異なる．
+方針 $A, B$ を決め打つ全探索がしたくなる．5桁なので $O(n^2)$ は怪しいが，色々工夫すると通る．
+主な枝刈りは以下の通り．手元で1s前後．
+ エラトステネスの篩で $A, B$ の候補を絞る． $A &lt; B$ とする． $C$ の1桁目は偶数でも $5$ でもないので，そこで探索を打ち切る． $C$ の最上位は $0$ ではないので，そこでも探索を打ち切る． $C$ の素数判定は篩の中を二分探索する．（これは怪しい）  [展開する]   反省 どう頑張っても1sかかるので，ジャッジを信じて投げたら通った．あとでシステスを通したら最大で400msだった．信仰心が足りない．
+  </p>
+
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/05/19/">Google Code Jam 2019 - Round 2</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>19 May 2019, 06:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/gcj">GCJ</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/writeup">WriteUp</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  QualのWriteUp R1AのWriteUp R1BのWriteUp R1CのWriteUp R2のWriteUp  結果 0完をしてしまった．悲しいのであまり言及しません．また来年．
+数学のみをしないで欲しい 読解  A: いきなり難しそうだけど… B: 全部に入れたら勝てないか C: 読めません． D: はい絶対難しい  重そうなセットに見えたのでABに絞る．
+A: New Elements: Part 1 なにを勘違いしたのか，C or Jが無限に大きい場合のみを考えてしまった．なので答えが1か2になって当然WA．
+B: Pottery Lottery  とりあえず全部に100を入れたらめちゃくちゃ負けた．最小が複数あると干渉してダメなことにここで気付く． 透視に1ターンはかかり過ぎな気がするので投票に専念する． いくつかの花瓶を投票で潰して残りに100を入れた．  3個残しが190/250くらい出て，いけそう缶． 残ってる花瓶同士で干渉している？  潰す花瓶が多いとあまり潰れないし，少ないと干渉するし難しい．  とりあえず全部に100を入れておけば，干渉のみに気を使えて良さそう．  残りに傾斜が付くように投票するもむしろ下がる． 透視して最小を確認しても下がる． 最大風速で210/250ぐらい出た．  順位表を見るとやっぱり重いので，ひたすらパラメータをいじる． 最後までこれ．   明日からもおブスファッション 正直最初に目を通した時点で無理だと感じた．解いたことのないタイプの問題しかない．これは本当にプログラミングコンテストですか．
+とはいえ上位はちゃんと通しているので完全に精進不足．R1Cの験を担いで直前にゲームをしてはいけなかった．
+ Humble Storeで無料配布中なのでぜひ．まだ途中．まあまあ面白いのだがメトロイドヴァニアの既プレイにOriとHollow Knightがあるので…
+  </p>
+
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/05/05/">Google Code Jam 2019 - Round 1C</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 May 2019, 06:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/gcj">GCJ</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/writeup">WriteUp</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  QualのWriteUp R1AのWriteUp R1BのWriteUp R1CのWriteUp R2のWriteUp  結果 AB2完60pt．414th．なんかstraightforwardでした．ゲームを直前までしてたのがよかったのかも．
+A: Robot Programming Strategy 概略 手順のわかっているジャンケンマンがたくさんいるので，全員にワンコインで勝てる「対ジャンケンマンロボ」を作ろう．
+雑感 今残っているジャンケンマン全部に，勝ちまたはあいこが出せればいい．実装ゲー．
+今気付いたけど googol って $10^{100}$ じゃん．血の気が引いた．翻訳に投げたのをそのまま読んで10100を書いている．実際には1手で1台倒すはずだからこんなにループはいらないし，むしろ $A$ が大きかったらTLEだった．昨日のAGCもそうだが，よく嘘をついてしまう．
+[展開する]   B: Power Arrangers 概略 {A,B,C,D,E}の順列 $120$ セットが1列に並んでいる．はずだったが1セット抜けているらしい．何回かの質問でどのセットが抜けているかを特定しよう．
+雑感 最初に各セットの先頭を質問すると候補が1/5に減って，残りの各セットの2番目を質問すると候補が1/4に減って…．これはAを解いてたら自然な流れだと思う．
+そう思うからこそ，Largeの質問回数を計算してたまげる． $$ 150 \geq 148 = 119 + 23 + 5 + 1 = 119 + \left( \dfrac{120}{5} - 1 \right) + \left( \dfrac{24}{4} - 1 \right) + \left( \dfrac{6}{3} - 1 \right) $$
+  </p>
+
+  
+  <footer>
+    <a href="https://chiyosbigdragon.github.io/blog/2019/05/05/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/04/29/">Google Code Jam 2019 - Round 1B</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Apr 2019, 06:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/gcj">GCJ</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/writeup">WriteUp</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  QualのWriteUp R1AのWriteUp R1BのWriteUp R1CのWriteUp R2のWriteUp  結果 Ac2完41pt．1815th．1811st．やっぱりちょっと上がりますね．Round1Cに進出．
+A: Manhattan Crepe Cart 概略 より多くの人が向かう交差点の場所を特定しよう．
+雑感 $(x,y)$ にいる人が $+x$ 方向を向いているなら交差点の候補は $(x&rsquo;,y&rsquo;) (x+1 \leq x&rsquo; \leq Q, 0 \leq y&rsquo; \leq Q)$
+点の候補が $x,y$ について独立なので別々に求めることが出来る．集計はimos法が楽か．何故か配列を4つ用意してさらに添字ミスで1WA．
+[展開する]   B: Draupnir 概略 X-day ringはX日で倍に増える．$d$ 日目のリングの総数を質問できるので，0日目での各リングの数を求めよう．
+雑感 $W = 2$ って何．Smallであれば連立1次方程式を解くだけでいいのでネットに実装を探しに行く．Python+ガウスの消去法が見つかったので慣れないながらもやる．手元では合ったのにWAした．辛い．
+Editorialにあった実装．
+[展開する]   C: Fair Fight 概略 $$ \left| \max _ {l \leq i \leq r} {c[i]} - \max _ {l \leq j \leq r} {d[j]} \right| \leq K $$
+  </p>
+
+  
+  <footer>
+    <a href="https://chiyosbigdragon.github.io/blog/2019/04/29/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/04/13/">Google Code Jam 2019 - Round 1A</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>13 Apr 2019, 15:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/gcj">GCJ</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/writeup">WriteUp</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+    QualのWriteUp R1AのWriteUp R1BのWriteUp R1CのWriteUp R2のWriteUp  結果 aC2完45pt．1500人通過で1584th1567th(何故か上がった)でした．まさかペナ差で落ちるとは…
+A: Pylons 概略 $R\times C$のグリッドを後述するルールで動く駒がある．重複することなく全てのマスを踏めるならば，その動き方を示せ．
+ルール 移動前の座標を $(r,c)$ ，移動後の座標を $(r&rsquo;,c&rsquo;)$ とする．以下のいずれにも該当してはいけない．
+ $r = r&rsquo;$ $c = c&rsquo;$ $r - c = r&rsquo; - c&rsquo;$ $r + c = r&rsquo; + c&rsquo;$  雑感 全探索しかわからない．最初はSmallすらも落ちたが，1解に到達した時点で強制終了させたらなんとか通った．Largeはまったくわからない．桃色大戦ぱいろんは昔やってましたね．
+[展開する]   B: Golf Gophers 概略 風車の羽根の枚数を毎晩いじって，ゴルフ場に棲むGopherの数を推定しよう．
+雑感 残り30分を切ったころに読み始めた．インタラクティブで絶望．この時点で2完なのでSmallだけでもとりたい気持ち．SmallはGopherの数が少ないので，雑でも行けると思って書き始めたがTLE．風車は回らず，Qualのツケが回ってきた．今考えれば中国剰余だなあという感じ．みんなのGOLFは4を昔やってましたね．
+C: Alien Rhyme 概略 与えられた単語からrhymeできるもの同士をペアにしたとき，最大何組ペアが出来るか．ただし同じ位置でのrhymeはありえんライムなのでやってはいけません．
+雑感 後ろから見て共通する部分で木を作った．これを「trie木」と言うらしい．深さが1進むと，その位置でrhymeするペアを1組作れるので，作れるペアの数を返り値で管理してDFSした．共通部分が長いとペアの数が単語数を超えるので，きちんとminを取らないといけない．substrしまくったので計算量が不安だったがなんとかLargeも通った．バイオ41は昔やってましたね．
+[展開する]   感想 あとの2回で通る気がしません．繰り上げとか，なさらないんですか？
+ バイオ4空耳 完全版 &mdash; YouTube[return]   
+  </p>
+
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/04/07/">Google Code Jam 2019 - Qualification Round</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>07 Apr 2019, 19:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/gcj">GCJ</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/writeup">WriteUp</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  QualのWriteUp R1AのWriteUp R1BのWriteUp R1CのWriteUp R2のWriteUp  結果 AB2完41ptで通過した．CDも解くつもりでいたが，Cで多倍長整数が必要なことに気付いてやる気を無くした．Round1以降に多倍長が出たらこの人はどうするつもりなのだろうか．
+A: Foregone Solution 概略 正整数 $N$ が渡されるので $N=A+B$ となるように分割する．ただし $A,B$ は正整数で $4$ を含んではならない．
+$N$ には1つ以上 $4$ が含まれる．
+雑感 読みやすくて助かる．桁ごとに見て，$4$ を $2+2$ に分解すればよさそう．この出力形式誰が得するんだ．
+[展開する]   B: You Can Go Your Own Way 概略 正方形のグリッドを左上から右下に動く人がいる．この人と経路を共有しないように左上から右下に向かうにはどう動けばいいか．
+雑感 即座に反転が思いついたがなぜか解法から外してしまった．まったく意味がわからない．結局場合分けをして解いた．結構重くなってしまった．
+ 左上から出る向きと右下に入る向きが違うとき  図のように端を通る．
+ 左上から出る向きと右下に入る向きが同じとき  鳩の巣原理から，同一方向に2連続で動くことがあるので，そこを狙って1回だけ交わる．図だと赤点を狙い撃ちしている．
+[展開する]   感想 通過するだけなら意外と簡単だった．「Google Code Jam 2019 - Qualification Round通過 」って字面だけ見たら激強に見えるな．Googleすごい．実際に強いと言えるのはTシャツを貰ってからだと思っているので，そこまでは頑張りたい．調べたら残りの参加者は27610人らしい．1000/27610…
+  </p>
+
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/03/22/">SRM753 Div1Easy MaxCutFree</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>22 Mar 2019, 14:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/srm">SRM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/graph-theory">Graph Theory</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/independent-set">Independent Set</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/dp">DP</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  URL https://community.topcoder.com/stat?c=problem_statement&amp;pm=15257
+概略 単純無向グラフ $G$ が与えられる．$G$ の橋を含まないような誘導部分グラフのうち，頂点数が最大となるものを求める．
+方針 要は，$G$ から橋だけを残したグラフについての最大独立集合問題である．このグラフは明らかに森であるから，木DPが使える．
+参考  制約が甘いので橋の検出にはUnionFindを使う．各辺ごとにそれを除いたグラフを構築し，端点の連結性を判定する．
+[展開する]   反省 本番では橋の検出までしかできなかった．最大独立集合問題であることにはなんとなく気付いていたが，名前だけが先走った．「NP困難じゃん…」
+dp等の初期化も忘れずに．
+  </p>
+
+  
+</article>
+
+    
+    
+
+
+<nav class="pagination" role="pagination">
+  
+  <a href="https://chiyosbigdragon.github.io/topics/competitiveprogramming/"><i class="fa fa-chevron-left"></i></a>
+  
+  <span>&nbsp;2 / 4&nbsp;</span>
+  
+  <a href="https://chiyosbigdragon.github.io/topics/competitiveprogramming/page/3/"><i class="fa fa-chevron-right"></i></a>
+  
+</nav>
+
+
+</div>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$",   right: "$",   display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "$$",   right: "$$",   display: true },
+                { left: "\\[", right: "\\]", display: true  },
+            ],
+        });
+    });
+    </script>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,600&amp;subset=japanese" rel="stylesheet">
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126147693-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-126147693-2');
+    </script>
+

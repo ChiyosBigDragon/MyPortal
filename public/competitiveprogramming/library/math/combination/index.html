@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+          <meta http-equiv="content-type" content="text/html; charset=utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="description" content="">
+          <meta name="generator" content="Hugo 0.56.3" />
+          <title>Combination | Spielsand</title>
+
+          
+          
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+          <!--[if lte IE 8]>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+          <![endif]-->
+          <!--[if gt IE 8]><!-->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+          <!--<![endif]-->
+
+          <!--[if lte IE 8]>
+          <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/side-menu-old-ie.css">
+          <![endif]-->
+          <!--[if gt IE 8]><!-->
+          <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/side-menu.css">
+          <!--<![endif]-->
+
+          <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/blackburn.css">
+
+          
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+          
+          <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+         
+          
+
+          
+          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css">
+          <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+          
+          <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+          
+          <script>hljs.initHighlightingOnLoad();</script>
+          
+
+          <link rel="shortcut icon" href="https://chiyosbigdragon.github.io/img/favicon.ico" type="image/x-icon" />
+
+        
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+          <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/top.css">
+          <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/my.css">
+          <script src="https://chiyosbigdragon.github.io/js/srcReader.js"></script>
+
+    </head>
+<body>
+    <div id="layout">
+
+      
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://chiyosbigdragon.github.io/">Spielsand</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/blog/"><i class='fa fa-list fa-fw'></i>Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/competitiveprogramming/"><i class='fa fa-bug fa-fw'></i>C-Programming</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/ChiyosBigDragon" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2019. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+
+<div class="header">
+    <h1>Combination</h1>
+    
+</div>
+<div class="content">
+
+  
+
+<h1 id="概略">概略</h1>
+
+<p>Combinationに係る諸計算のライブラリ</p>
+
+<h1 id="目次">目次</h1>
+
+<ul>
+<li><a href="#アルゴリズム">アルゴリズム</a>
+
+<ul>
+<li><a href="#逆元">逆元</a></li>
+<li><a href="#パスカルの三角形">パスカルの三角形</a></li>
+</ul></li>
+<li><a href="#実装例">実装例</a>
+
+<ul>
+<li><a href="#inverse">逆元</a></li>
+<li><a href="#pascal">パスカルの三角形</a></li>
+</ul></li>
+<li><a href="#verify">verify</a>
+
+<ul>
+<li><a href="#AOJ 1501">AOJ 1501</a></li>
+<li><a href="#yuki_117">yukicoder No.117</a></li>
+<li><a href="#ABC021_D">ABC021_D</a></li>
+</ul></li>
+<li><a href="#参考">参考</a></li>
+</ul>
+
+<h1 id="アルゴリズム">アルゴリズム</h1>
+
+<h2 id="逆元">逆元</h2>
+
+<p>$$ {}_{n} \mathrm{C} _ {r} = \frac{n!}{r!(n-r)!} $$
+なので分数のmodを求めたい気持ちになる．ここで逆元を使う．</p>
+
+<p>整数 $a$ と 素数 $p$ について
+$$ p = \left\lfloor \frac{p}{a} \right\rfloor \times a + p\%a $$
+mod $p$ とすると
+$$ 0 \equiv \left\lfloor \frac{p}{a} \right\rfloor \times a + p\%a $$
+$$ p\%a \equiv - \left\lfloor \frac{p}{a} \right\rfloor \times a $$
+$$ p\%a \times a^{-1} \equiv - \left\lfloor \frac{p}{a} \right\rfloor $$
+$$ a^{-1} \equiv - \left\lfloor \frac{p}{a} \right\rfloor \times (p\%a)^{-1} $$</p>
+
+<p>ここで $p\%a &lt; a$ であるから，小さい方から漸化的に求められる．</p>
+
+<p>なお，$0^{-1}$ の値は未定義なので，最終的な式において $p\%a \neq 0$ でなければならない．そのため $p$ は素数である．（正確には $p$ と $a$ が互いに素）</p>
+
+<h2 id="パスカルの三角形">パスカルの三角形</h2>
+
+<p>$$
+\begin{cases}
+{}_{n} \mathrm{C} _ {r} = {}_{n-1} \mathrm{C} _ {r-1} + {}_{n-1} \mathrm{C} _ {r} \\ {}_{n} \mathrm{C} _ {0} = {}_{n} \mathrm{C} _ {n} = 1
+\end{cases}
+$$</p>
+
+<p>より漸化的に求められる．</p>
+
+<h1 id="実装例">実装例</h1>
+
+<h2 id="inverse">逆元</h2>
+
+<p>$n,r \leq 10^6 $ 程度を想定している．$p$ は素数．</p>
+
+<ul>
+<li>Combination$(p)$ := mod $p$ 下で階乗，逆元，逆元の階乗を求める．
+
+<ul>
+<li>$O(n)$</li>
+</ul></li>
+<li>C$(n,r)$, P$(n,r)$, H$(n,r)$ := $ {}_{n} \mathrm{C} _ {r} , {}_{n} \mathrm{P} _ {r} , {}_{n} \mathrm{H} _ {r} $
+
+<ul>
+<li>$O(1)$</li>
+</ul></li>
+</ul>
+
+<div class="SyntaxHighlight">
+	<div align="right" style="color: #3b8bba; margin:-10px 0px -10px 0px; cursor: pointer;">[展開する]</div>
+	<pre><code class="language-cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Combination/inverse/combination.cpp"></code></pre>
+</div>
+
+
+<h2 id="pascal">パスカルの三角形</h2>
+
+<p>$n,r \leq 10^3 $ 程度を想定している．$p$ は素数でなくてもよい．</p>
+
+<ul>
+<li>CombinationOnPascal$(p)$ := mod $p$ 下で二項係数を計算する．
+
+<ul>
+<li>$O(nr)$</li>
+</ul></li>
+<li>C$(n,r)$, P$(n,r)$, H$(n,r)$ := $ {}_{n} \mathrm{C} _ {r} , {}_{n} \mathrm{P} _ {r} , {}_{n} \mathrm{H} _ {r} $
+
+<ul>
+<li>$O(1)$</li>
+</ul></li>
+</ul>
+
+<div class="SyntaxHighlight">
+	<div align="right" style="color: #3b8bba; margin:-10px 0px -10px 0px; cursor: pointer;">[展開する]</div>
+	<pre><code class="language-cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Combination/pascal/combination_pascal.cpp"></code></pre>
+</div>
+
+
+<h1 id="verify">verify</h1>
+
+<h4 id="AOJ 1501"><a href="https://onlinejudge.u-aizu.ac.jp/challenges/search/volumes/1501">AOJ1501 Grid &mdash; AIZU ONLINE JUDGE</a></h4>
+mod 1,000,000,007 だと思っていたら～、<br>
+mod 100,000,007 でした～。<br>
+チクショー！！
+
+<div class="SyntaxHighlight">
+	<div align="right" style="color: #3b8bba; margin:-10px 0px -10px 0px; cursor: pointer;">[展開する]</div>
+	<pre><code class="language-cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Combination/pascal/verify/AOJ1501.cpp"></code></pre>
+</div>
+
+
+<h4 id="yuki_117"><a href="https://yukicoder.me/problems/no/117">No.117 組み合わせの数 &mdash; yukicoder</a></h4>
+
+<div class="SyntaxHighlight">
+	<div align="right" style="color: #3b8bba; margin:-10px 0px -10px 0px; cursor: pointer;">[展開する]</div>
+	<pre><code class="language-cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Combination/inverse/verify/yuki117.cpp"></code></pre>
+</div>
+
+
+<h4 id="ABC021_D"><a href="https://atcoder.jp/contests/abc021/tasks/abc021_d">D - 多重ループ - AtCoder Beginner Contest 021 &mdash; AtCoder</a></h4>
+
+<div class="SyntaxHighlight">
+	<div align="right" style="color: #3b8bba; margin:-10px 0px -10px 0px; cursor: pointer;">[展開する]</div>
+	<pre><code class="language-cpp" src="https://raw.githubusercontent.com/ChiyosBigDragon/Library/master/Math/Combination/inverse/verify/ABC021_D.cpp"></code></pre>
+</div>
+
+
+<h1 id="参考">参考</h1>
+
+<ul>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%83%91%E3%82%B9%E3%82%AB%E3%83%AB%E3%81%AE%E4%B8%89%E8%A7%92%E5%BD%A2">パスカルの三角形 &mdash; Wikipedia</a></li>
+<li><a href="http://takapt0226.hatenablog.com/entry/2013/03/15/213551">1~nまでの逆元をO(n)で求める方法 &mdash; takapt0226&rsquo;s diary</a></li>
+<li><a href="http://drken1215.hatenablog.com/entry/2018/06/08/210000">よくやる二項係数 (nCk mod. p)、逆元 (a^-1 mod. p) の求め方 &mdash; けんちょんの競プロ精進記録</a></li>
+<li><a href="https://www37.atwiki.jp/uwicoder/pages/2118.html">nCr mod mの求め方 &mdash; uwicoder</a></li>
+<li><a href="https://twitter.com/dayukoume">コウメ太夫 (@dayukoume) &mdash; Twitter</a></li>
+</ul>
+
+
+</div>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$",   right: "$",   display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "$$",   right: "$$",   display: true },
+                { left: "\\[", right: "\\]", display: true  },
+            ],
+        });
+    });
+    </script>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,600&amp;subset=japanese" rel="stylesheet">
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126147693-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-126147693-2');
+    </script>
+

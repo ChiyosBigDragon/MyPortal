@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.56.3" />
+
+  <title>Greedy &middot; Spielsand</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+  <link rel="alternate" type="application/rss+xml" title="Spielsand"
+    href='https://chiyosbigdragon.github.io/tags/greedy/index.xml' />
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github-gist.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://chiyosbigdragon.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+    
+        <link rel="stylesheet" href="https://chiyosbigdragon.github.io/css/my.css">
+    
+  
+  
+    
+        <script src="https://chiyosbigdragon.github.io/js/srcReader.js"></script>
+    
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://chiyosbigdragon.github.io/">Spielsand</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/blog/"><i class='fa fa-list fa-fw'></i>Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chiyosbigdragon.github.io/competitiveprogramming/"><i class='fa fa-bug fa-fw'></i>C-Programming</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href='https://chiyosbigdragon.github.io/tags/greedy/index.xml'><i
+          class="fas fa-rss fa-fw"></i>RSS</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/ChiyosBigDragon" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2019. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+    <h1>Greedy</h1>
+    <h2><a href="https://chiyosbigdragon.github.io/blog">Blog</a> >> <a href="https://chiyosbigdragon.github.io/tags">Tags</a> >> Greedy</h2>
+</div>
+
+<div class="content">
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/09/11/">SRM655 Div1Easy BichromePainting</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Sep 2019, 12:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/srm">SRM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/greedy">Greedy</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  URL https://community.topcoder.com/stat?c=problem_statement&amp;pm=13709
+概略 グリッドに色を塗る操作を行う．最初は全て白である．1回の操作では，$k \times k$ の正方形を選び，その中を黒または白で塗りつぶす事ができる．この操作を任意回繰り返すとき，与えられる最終的な色の配置が実現できるかどうかを調べる．
+方針 最終状態から操作を逆にたどってみることにします．今戻すことができるのは $k \times k$ が全て同じ色で塗られている箇所です．問題は戻したあとの盤面がどうなっているかです．「戻す」操作は，順方向から見れば「塗りつぶす」操作であることに注意します．「塗りつぶす」際に重要なことは，その下の色などどうでも良いということです．つまり「戻す」操作における遷移先は，黒と白のどちらもとることができます．便宜上これを D と置くと，全てのマスをDにできるかという問題に変化し，これはシミュレーションすれば良いです．$n \leq 20$ なので何でもできます．実装は $O(n^6)$ です．
+[展開する]   反省 DはDottidemoiiのD．
+  </p>
+
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/08/26/">SRM659 Div1Easy ApplesAndOrangesEasy</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Aug 2019, 12:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/srm">SRM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/greedy">Greedy</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  URL https://community.topcoder.com/stat?c=problem_statement&amp;pm=13791&amp;rd=16462
+概略 果物（リンゴまたはオレンジ）を順に $N$ 個食べる．info[i]番目は必ずリンゴを食べる．直近 $K$ 個の内，リンゴは最大でも $\left\lfloor \dfrac{K}{2} \right\rfloor$ 個までしか食べてはいけないとき，全体で食べるリンゴの最大値を求める．
+方針 左から見ていき，リンゴを食べられるならば必ず食べる貪欲をします．$i$ 番目にリンゴを食べるとその影響は $i + K - 1$ 番目まで及ぶため，後回しにして同じ個数を食べられる可能性はあっても，それより多く食べることはできません（？）．
+あとは $i$ 番目でリンゴが食べられるかを判定できればよく，これは全ての $0 \leq d &lt; K$ について $[i - d, i + (K - d))$ に含まれるリンゴが $\left\lfloor \dfrac{K}{2} \right\rfloor$ 個未満であることが条件です．
+[展開する]   反省 貪欲の証明があっているのかわからない．脳死でセグ木を貼らない．
+  </p>
+
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/08/21/">SRM681 Div1Easy FleetFunding</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>21 Aug 2019, 12:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/srm">SRM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/greedy">Greedy</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/binary-search">Binary Search</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+   URL https://community.topcoder.com/stat?c=problem_statement&amp;pm=14104
+概略 宇宙船1隻を作るには，$m$ 種類のパーツが1つずつ必要である．また，店が $n$ 個ある．店 $i$ は種類 $[a_i, b_i]$ のパーツを合計 $k_i$ 個まで売ってくれる．
+宇宙船は最大何隻作れるか．
+方針 $x$ 隻作れるかを二分探索します．判定にはパーツの種類を時間軸に持った，区間スケジューリング的な考え方を用います．パーツの種類を昇順に見ていき，現時点で購入可能な店について $b_i$（区間の上限）の昇順に合計 $x$ 個購入します．途中で購入可能な店が無くなった場合，失敗です．このような操作は優先度付きキューを2本持つことで簡単に実現できます．
+パーツの総数は $\sum k \leq nk _ {\max}$ なので操作回数は大体 $m \log \dfrac{n}{m}k _ {\max}$ で，これはおよそ $10^6$ です．
+[展開する]   
+  </p>
+
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/08/15/">SRM757 Div1Easy CentipedeSocks</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Aug 2019, 12:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/srm">SRM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/greedy">Greedy</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  URL https://community.topcoder.com/stat?c=problem_statement&amp;pm=15445&amp;rd=17496
+概略 足が $F$ 本のムカデが $C$ 匹いる．それぞれのムカデはすべての足に同じ色の靴下を履かないと満足しない．靴下はビンに入っていて，各色の本数の内訳はvectorで示される．ビンからランダムに靴下を取り出していき，同色が $F$ 本揃った時点でムカデに履かせる．
+すべてのムカデが満足するためにビンから取り出す靴下の本数の最大値を求める．
+方針 最終的にできるだけ多くの靴下を無駄にしたいです．そこで次のような貪欲を考えます．
+「残りの本数から $F$ 本取ったあとに追加で取れる本数の多い順に取る」 わかりづらいので実装したアルゴリズムを使って，適当な入力を処理します．あとは頑張ってください．
+F = 5, s(sockCounts) = {1, 3, 6, 7, 10, 14}とします．
+ Fに満たないものを全部取ります．  ans += 1 + 3 s = {6, 7, 10, 14}  sをソートして貪欲に取っていきます．ルールは「F本取ったあとに追加で取れる本数の多い順に取る」です．括弧内が指標です．F本取れる場合にはカウントCが減っていきます．今回はC = 5とします．  {14(4), 10(4), 7(2), 6(1)} {10(4), 9(4), 7(2), 6(1)}  C = 4 ans += 5  {9(4), 5(4), 7(2), 6(1)}  C = 3 ans += 5  {5(4), 4(4), 7(2), 6(1)}  C = 2 ans += 5
+  </p>
+
+  
+  <footer>
+    <a href="https://chiyosbigdragon.github.io/blog/2019/08/15/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2019/08/14/">SRM715 Div1Easy MaximumRange</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>14 Aug 2019, 12:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/srm">SRM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/greedy">Greedy</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+   URL https://community.topcoder.com/stat?c=problem_statement&amp;pm=14613
+概略 +，-からなる文字列がある．+はインクリメント，-はデクリメントに相当する．初期値を0として左から操作を行い，操作中の最大値と最小値の差がスコアになる．
+与えられた文字列の部分列についても同様に操作が行えるとき，スコアの最大値はいくらであるか．
+方針 +または-のみを取ることで簡単にスコアを最大化できます．最大値と最小値のペアを $(\max, \min)$ と表すことにします．+のみが $A$ 個ある操作列は $(A, 0)$ で，スコアは $A$ です．ここに-を $B$ 個加えてみましょう．スコアを上げるには最小値を小さくするしかなく，相殺する位置には置けません．
+ 先頭に加えたとき : $(\max(A - B, 0), -B)$  スコア : $\max(A, B)$  殿に加えたとき : $(A, \min(A - B, 0))$  スコア : $\max(A, B)$   が考えられますが，これは結局，+または-のみを取れば良いことを示しています．
+[展開する]   
+  </p>
+
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2018/09/11/">SRM512 Div1Easy MysteriousRestaurant</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Sep 2018, 09:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/srm">SRM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/greedy">Greedy</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+   URL https://community.topcoder.com/stat?c=problem_statement&amp;pm=11295
+概略 $N$ 日間だけ開くレストランがある．メニューは $M$ 種類あり，その値段は日ごと，メニューごとに異なる．
+また，注文するメニューは $7$ 日前と同じでなくてはならない．
+1日1回注文をするとして，財布の限り粘るとすると何日間粘ることが出来るか．
+方針 サンプル1を見ると，1日だけいる場合と8日いる場合とでは，取る料理の種類が異なることがわかる．なので日を進めるたび，曜日( $7n$ 日前)の料理をおさらいして最小コストを再計算してやるとよい．
+7日目まではソートして一番左にくるやつを選ぶ．以降は曜日でかかったコストをいったんbudgetに戻してから再計算．この方法だと貪欲にやってる感が強いので見通しはいい．
+[展開する]   
+  </p>
+
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2018/08/16/">SRM506 Div1Easy SlimeXSlimesCity</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>16 Aug 2018, 03:30</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/srm">SRM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/greedy">Greedy</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+   URL https://community.topcoder.com/stat?c=problem_statement&amp;pm=11154
+概略 $N$ 個の街があり各々には名前がついている．2つの街の合併を繰り返し，最終的に1つにすることを考える．
+合併前の街の人口を $i,j (i \leq j)$ とする．
+ $i &lt; j$ のとき  合併後の街の名前は $j$ を継承する．  $i = j$ のとき  合併後の街の名前は $i$ または $j$ を継承する．   最終的に街が1つになったとき，その名前として取り得るものは何通りか．
+方針 B - Colorful Creatures &mdash; AtCoder Grand Contest 011
+サンプル5の解釈を説明する．
+ソートして人口の昇順に並べても一般性は失われない．また赤は累積和である．
+合併のルールから，自分より人口の少ない街は無条件に取り込めるので全て取り込むことにする．これで増えた人口でも1つ右の街が取り込めなければ，その街が生き残ることはない．最終目標は全ての街を合併することなので，右から赤と黒を判定をしていき，図の点線のように断層ができるまでの数が答え．
+[展開する]   
+  </p>
+
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2018/07/26/">SRM501 Div1Easy FoxPlayingGame</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Jul 2018, 17:30</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/srm">SRM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/math">Math</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/greedy">Greedy</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  URL http://community.topcoder.com/stat?c=problem_statement&amp;pm=11284
+概略 初期スコアを0として2種類の行動を任意の順番で行う．
+ A: scoreAを足す． B: scoreBを掛ける  Aを $nA$ 回，Bを $nB$ 回行うときのスコアの最大値を求める．
+方針 1年生 (A First Grader) &mdash; Aizu Online Judge を解いた経験からDP解を思いつくも，うまくいかない．しぶしぶ考察すると，「足してから掛けたい」「正負は融通が利くので絶対値を大きくしたい」など思いついたため，全部入れ込んだ．場合分けはコードを参照．
+[展開する]   追記：他人の解法が鮮やかすぎて直視できない
+  </p>
+
+  
+</article>
+
+    
+        <article>
+  <header>
+    <h2><a href="https://chiyosbigdragon.github.io/blog/2018/07/18/">SRM500 Div2Easy SRMCards</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Jul 2018, 12:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chiyosbigdragon.github.io/topics/competitiveprogramming">CompetitiveProgramming</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/srm">SRM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://chiyosbigdragon.github.io/tags/greedy">Greedy</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+   URL http://community.topcoder.com/stat?c=problem_statement&amp;pm=11341
+概略 数列が空になるまで以下の操作を繰り返す．
+ 数列から1つ数字を選びこれを消す． 上で選んだ数字を $n$とするとき，数列に $n\pm 1$ が存在すればこれ(ら)も同時に消す．  取り得る操作回数のうち最大を求める．
+方針 ソートして小さい順に選択すると最大．証明は苦しいが，3個同時に消せる場面では必ず2-1と2回に分けて消せることに注意する．
+[展開する]   
+  </p>
+
+  
+</article>
+
+    
+    
+
+</div>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$",   right: "$",   display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "$$",   right: "$$",   display: true },
+                { left: "\\[", right: "\\]", display: true  },
+            ],
+        });
+    });
+    </script>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,600&amp;subset=japanese" rel="stylesheet">
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126147693-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-126147693-2');
+    </script>
+
