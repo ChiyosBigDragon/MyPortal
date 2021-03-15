@@ -6,9 +6,12 @@ tags: ["ICPC"]
 topics: ["CompetitiveProgramming"]
 ---
 
+<!--more-->
+
 {{% fluid_img src="./images/rank.png" %}}
 
 11/16-<sup>11</sup>⁄<sub>17</sub>のICPC 2019 Asia Yokohama Regionalに参加しました．ABH3完で49位です．弊チームのICPC2019はこれで終わりです．
+
 
 ## 当日まで
 [国内予選](../../07/13)が終わってからは謎の満足感で（個人では）精進量が落ちていた気がします．チームとしては英語の練習としてSRMを埋めたり，JAG夏合宿に参加して絶望したり，PG Battleで爆死したり~~，チームメイトが失恋したり~~となかなかに賑やかでした．直前は大学が（自主）休講であることが多く，生活リズムもなにもなかったです．
